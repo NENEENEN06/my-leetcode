@@ -12,12 +12,13 @@
 
 | # | Problem | Difficulty | Topic |
 |---|---|---|---|
+| [0003](0003-longest-substring-without-repeating-characters) | Longest Substring Without Repeating Characters | Medium | Hash Table |
 | [3568](3568-minimum-moves-to-clean-the-classroom) | Minimum Moves to Clean the Classroom | Medium | BFS |
 | [3875](3875-construct-uniform-parity-array-i) | Construct Uniform Parity Array I | Easy | Array |
 | [3876](3876-construct-uniform-parity-array-ii) | Construct Uniform Parity Array II | Medium | Array |
 | [3903](3903-smallest-stable-index-i) | Smallest Stable Index I | Easy | Array |
 
-共 4 道题。
+共 5 道题。
 
 <!-- leetcode-index:end -->
 ## 这是什么

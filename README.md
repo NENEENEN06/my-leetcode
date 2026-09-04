@@ -15,11 +15,11 @@
 | [3568](3568-minimum-moves-to-clean-the-classroom) | Minimum Moves to Clean the Classroom | Medium | BFS |
 | [3875](3875-construct-uniform-parity-array-i) | Construct Uniform Parity Array I | Easy | Array |
 | [3876](3876-construct-uniform-parity-array-ii) | Construct Uniform Parity Array II | Medium | Array |
+| [3903](3903-smallest-stable-index-i) | Smallest Stable Index I | Easy | Array |
 
-共 3 道题。
+共 4 道题。
 
 <!-- leetcode-index:end -->
-
 ## 这是什么
 
 这是一份面向面试与个人复习的 LeetCode 刷题记录。每道题都写成独立的 Markdown 题解：中文思路、复杂度分析，以及可直接运行的 C++ 代码，而不是只粘贴一个通过答案。

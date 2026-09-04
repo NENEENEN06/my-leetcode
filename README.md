@@ -12,9 +12,9 @@
 
 | # | Problem | Difficulty | Topic |
 |---|---|---|---|
-| 3568 | Minimum Moves to Clean the Classroom | Medium | BFS |
-| 3875 | Construct Uniform Parity Array I | Easy | Array |
-| 3876 | Construct Uniform Parity Array II | Medium | Array |
+| [3568](3568-minimum-moves-to-clean-the-classroom) | Minimum Moves to Clean the Classroom | Medium | BFS |
+| [3875](3875-construct-uniform-parity-array-i) | Construct Uniform Parity Array I | Easy | Array |
+| [3876](3876-construct-uniform-parity-array-ii) | Construct Uniform Parity Array II | Medium | Array |
 
 共 3 道题。
 

@@ -9,7 +9,8 @@
 | # | Problem | Difficulty | Topic |
 |---|---|---|---|
 | 3568 | Minimum Moves to Clean the Classroom | Medium | BFS |
+| 3875 | Construct Uniform Parity Array I | Easy | Array |
 
-共 1 道题。
+共 2 道题。
 
 <!-- leetcode-index:end -->

@@ -17,8 +17,9 @@
 | [3875](3875-construct-uniform-parity-array-i) | Construct Uniform Parity Array I | Easy | Array |
 | [3876](3876-construct-uniform-parity-array-ii) | Construct Uniform Parity Array II | Medium | Array |
 | [3903](3903-smallest-stable-index-i) | Smallest Stable Index I | Easy | Array |
+| [3904](3904-smallest-stable-index-ii) | Smallest Stable Index II | Medium | Array |
 
-共 5 道题。
+共 6 道题。
 
 <!-- leetcode-index:end -->
 ## 这是什么

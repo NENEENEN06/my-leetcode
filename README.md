@@ -12,16 +12,18 @@
 
 | # | Problem | Difficulty | Topic |
 |---|---|---|---|
-| [0003](0003-longest-substring-without-repeating-characters) | Longest Substring Without Repeating Characters | Medium | Hash Table |
-| [3568](3568-minimum-moves-to-clean-the-classroom) | Minimum Moves to Clean the Classroom | Medium | BFS |
-| [3875](3875-construct-uniform-parity-array-i) | Construct Uniform Parity Array I | Easy | Array |
-| [3876](3876-construct-uniform-parity-array-ii) | Construct Uniform Parity Array II | Medium | Array |
-| [3903](3903-smallest-stable-index-i) | Smallest Stable Index I | Easy | Array |
-| [3904](3904-smallest-stable-index-ii) | Smallest Stable Index II | Medium | Array |
+| 0003 | Longest Substring Without Repeating Characters | Medium | Hash Table |
+| 0115 | Distinct Subsequences | Hard | String |
+| 3568 | Minimum Moves to Clean the Classroom | Medium | BFS |
+| 3875 | Construct Uniform Parity Array I | Easy | Array |
+| 3876 | Construct Uniform Parity Array II | Medium | Array |
+| 3903 | Smallest Stable Index I | Easy | Array |
+| 3904 | Smallest Stable Index II | Medium | Array |
 
-共 6 道题。
+共 7 道题。
 
 <!-- leetcode-index:end -->
+
 ## 这是什么
 
 这是一份面向面试与个人复习的 LeetCode 刷题记录。每道题都写成独立的 Markdown 题解：中文思路、复杂度分析，以及可直接运行的 C++ 代码，而不是只粘贴一个通过答案。

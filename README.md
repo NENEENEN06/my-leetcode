@@ -12,6 +12,7 @@
 
 | # | Problem | Difficulty | Topic |
 |---|---|---|---|
+| 0002 | Add Two Numbers | Medium | Linked List |
 | 0003 | Longest Substring Without Repeating Characters | Medium | Hash Table |
 | 0115 | Distinct Subsequences | Hard | String |
 | 0940 | Distinct Subsequences II | Hard | String |
@@ -21,10 +22,9 @@
 | 3903 | Smallest Stable Index I | Easy | Array |
 | 3904 | Smallest Stable Index II | Medium | Array |
 
-共 8 道题。
+共 9 道题。
 
 <!-- leetcode-index:end -->
-
 ## 这是什么
 
 这是一份面向面试与个人复习的 LeetCode 刷题记录。每道题都写成独立的 Markdown 题解：中文思路、复杂度分析，以及可直接运行的 C++ 代码，而不是只粘贴一个通过答案。

@@ -18,12 +18,13 @@
 | 0940 | Distinct Subsequences II | Hard | String |
 | 3568 | Minimum Moves to Clean the Classroom | Medium | BFS |
 | 3870 | Count Commas in Range | Easy | Math |
+| 3871 | Count Commas in Range II | Medium | Math |
 | 3875 | Construct Uniform Parity Array I | Easy | Array |
 | 3876 | Construct Uniform Parity Array II | Medium | Array |
 | 3903 | Smallest Stable Index I | Easy | Array |
 | 3904 | Smallest Stable Index II | Medium | Array |
 
-共 10 道题。
+共 11 道题。
 
 <!-- leetcode-index:end -->
 ## 这是什么

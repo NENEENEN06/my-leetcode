@@ -16,6 +16,7 @@
 | 0003 | Longest Substring Without Repeating Characters | Medium | Hash Table |
 | 0115 | Distinct Subsequences | Hard | String |
 | 0940 | Distinct Subsequences II | Hard | String |
+| 2265 | Count Nodes Equal to Average of Subtree | Medium | Tree |
 | 3568 | Minimum Moves to Clean the Classroom | Medium | BFS |
 | 3870 | Count Commas in Range | Easy | Math |
 | 3871 | Count Commas in Range II | Medium | Math |
@@ -24,7 +25,7 @@
 | 3903 | Smallest Stable Index I | Easy | Array |
 | 3904 | Smallest Stable Index II | Medium | Array |
 
-共 11 道题。
+共 12 道题。
 
 <!-- leetcode-index:end -->
 ## 这是什么

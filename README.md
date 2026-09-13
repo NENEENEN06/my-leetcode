@@ -15,6 +15,7 @@
 | 0002 | Add Two Numbers | Medium | Linked List |
 | 0003 | Longest Substring Without Repeating Characters | Medium | Hash Table |
 | 0115 | Distinct Subsequences | Hard | String |
+| 0835 | Image Overlap | Medium | Array |
 | 0940 | Distinct Subsequences II | Hard | String |
 | 2265 | Count Nodes Equal to Average of Subtree | Medium | Tree |
 | 3483 | Unique 3-Digit Even Numbers | Easy | Enumeration |
@@ -26,7 +27,7 @@
 | 3903 | Smallest Stable Index I | Easy | Array |
 | 3904 | Smallest Stable Index II | Medium | Array |
 
-共 13 道题。
+共 14 道题。
 
 <!-- leetcode-index:end -->
 ## 这是什么

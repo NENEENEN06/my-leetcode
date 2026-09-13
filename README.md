@@ -16,8 +16,9 @@
 
 **算法分布**：Array 7 · Math 5 · String 3 · Dynamic Programming 2 · Hash Table 2 · Matrix 2 · BFS 1 · Binary Tree 1 · Bit Manipulation 1 · Depth-First Search 1 · Enumeration 1 · Linked List 1 等 17 个标签（全量见完整索引）
 
-- 📖 **[完整索引](solutions/README.md)**：按题号 / 按难度 / 按算法三个视图
-- 🔍 **[筛选页](index.html)**：搜题号与标题，按难度、算法筛选
+- 📖 **[完整索引](solutions/README.md)**：按题号 / 按难度 / 按算法三个视图，页首可锚点跳转
+- 🔍 **[筛选页](index.html)**：搜题号与标题，按难度、算法筛选（本地双击打开）
+- 🌐 **[在线筛选页](https://neneenen06.github.io/my-leetcode/)**：GitHub Pages 上直接筛难度 / 算法，点题号进题解
 
 <!-- leetcode-index:end -->
 

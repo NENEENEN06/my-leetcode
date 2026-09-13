@@ -62,6 +62,7 @@ const DATA = [
    "Recursion"
   ],
   "rel": "solutions/0002-add-two-numbers/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/0002-add-two-numbers/README.md",
   "url": "https://leetcode.cn/problems/add-two-numbers/"
  },
  {
@@ -74,6 +75,7 @@ const DATA = [
    "Sliding Window"
   ],
   "rel": "solutions/0003-longest-substring-without-repeating-characters/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/0003-longest-substring-without-repeating-characters/README.md",
   "url": "https://leetcode.cn/problems/longest-substring-without-repeating-characters/"
  },
  {
@@ -85,6 +87,7 @@ const DATA = [
    "Dynamic Programming"
   ],
   "rel": "solutions/0115-distinct-subsequences/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/0115-distinct-subsequences/README.md",
   "url": "https://leetcode.cn/problems/distinct-subsequences/"
  },
  {
@@ -96,6 +99,7 @@ const DATA = [
    "Matrix"
   ],
   "rel": "solutions/0835-image-overlap/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/0835-image-overlap/README.md",
   "url": "https://leetcode.cn/problems/image-overlap/"
  },
  {
@@ -107,6 +111,7 @@ const DATA = [
    "Dynamic Programming"
   ],
   "rel": "solutions/0940-distinct-subsequences-ii/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/0940-distinct-subsequences-ii/README.md",
   "url": "https://leetcode.cn/problems/distinct-subsequences-ii/"
  },
  {
@@ -119,6 +124,7 @@ const DATA = [
    "Binary Tree"
   ],
   "rel": "solutions/2265-count-nodes-equal-to-average-of-subtree/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/2265-count-nodes-equal-to-average-of-subtree/README.md",
   "url": "https://leetcode.cn/problems/count-nodes-equal-to-average-of-subtree/"
  },
  {
@@ -131,6 +137,7 @@ const DATA = [
    "Hash Table"
   ],
   "rel": "solutions/3483-unique-3-digit-even-numbers/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3483-unique-3-digit-even-numbers/README.md",
   "url": "https://leetcode.cn/problems/unique-3-digit-even-numbers/"
  },
  {
@@ -144,6 +151,7 @@ const DATA = [
    "Matrix"
   ],
   "rel": "solutions/3568-minimum-moves-to-clean-the-classroom/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3568-minimum-moves-to-clean-the-classroom/README.md",
   "url": "https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/"
  },
  {
@@ -154,6 +162,7 @@ const DATA = [
    "Math"
   ],
   "rel": "solutions/3870-count-commas-in-range/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3870-count-commas-in-range/README.md",
   "url": "https://leetcode.cn/problems/count-commas-in-range/description/?envType=daily-question&envId=2026-09-08"
  },
  {
@@ -164,6 +173,7 @@ const DATA = [
    "Math"
   ],
   "rel": "solutions/3871-count-commas-in-range-ii/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3871-count-commas-in-range-ii/README.md",
   "url": "https://leetcode.cn/problems/count-commas-in-range-ii/description/?envType=daily-question&envId=2026-09-09"
  },
  {
@@ -175,6 +185,7 @@ const DATA = [
    "Math"
   ],
   "rel": "solutions/3875-construct-uniform-parity-array-i/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3875-construct-uniform-parity-array-i/README.md",
   "url": "https://leetcode.cn/problems/construct-uniform-parity-array-i/"
  },
  {
@@ -186,6 +197,7 @@ const DATA = [
    "Math"
   ],
   "rel": "solutions/3876-construct-uniform-parity-array-ii/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3876-construct-uniform-parity-array-ii/README.md",
   "url": "https://leetcode.cn/problems/construct-uniform-parity-array-ii/"
  },
  {
@@ -197,6 +209,7 @@ const DATA = [
    "Prefix Sum"
   ],
   "rel": "solutions/3903-smallest-stable-index-i/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3903-smallest-stable-index-i/README.md",
   "url": "https://leetcode.cn/problems/smallest-stable-index-i/"
  },
  {
@@ -208,6 +221,7 @@ const DATA = [
    "Prefix/Suffix Preprocessing"
   ],
   "rel": "solutions/3904-smallest-stable-index-ii/README.md",
+  "gh": "https://github.com/NENEENEN06/my-leetcode/blob/main/solutions/3904-smallest-stable-index-ii/README.md",
   "url": "https://leetcode.cn/problems/smallest-stable-index-ii/description/"
  }
 ];
@@ -249,14 +263,19 @@ function abbrsOf(r) {
 }
 
 function match(r) {
-  if (state.diff !== "all" && r.difficulty !== state.diff) return false;
-  if (state.topic !== "all" && !(r.topics || []).includes(state.topic)) return false;
-  const q = state.q.trim().toLowerCase();
-  if (!q) return true;
-  const hay = [String(r.number), String(r.number).padStart(4, "0"), r.title,
-    (r.topics || []).join(" "), abbrsOf(r).join(" ")]
-    .join(" ").toLowerCase();
-  return hay.includes(q);
+if (state.diff !== "all" && r.difficulty !== state.diff) return false;
+if (state.topic !== "all" && !(r.topics || []).includes(state.topic)) return false;
+const q = state.q.trim().toLowerCase();
+if (!q) return true;
+const hay = [String(r.number), String(r.number).padStart(4, "0"), r.title,
+(r.topics || []).join(" "), abbrsOf(r).join(" ")]
+.join(" ").toLowerCase();
+return hay.includes(q);
+}
+
+// 本地双击打开 -> 跳本地题解；托管在 GitHub Pages / 任何 http 下 -> 跳 GitHub 渲染页（裸 .md 在 Pages 上只能当文本下载）
+function href(r) {
+return (location.protocol === "file:" || !r.gh) ? r.rel : r.gh;
 }
 
 function render() {
@@ -269,8 +288,8 @@ function render() {
     const tags = (r.topics || []).join(", ");
     const lc = r.url ? ' <a class="lc" href="' + esc(r.url) + '" target="_blank" rel="noreferrer">LeetCode &nearr;</a>' : "";
     return "<tr>" +
-      '<td class="num"><a href="' + esc(r.rel) + '">' + String(r.number).padStart(4, "0") + "</a></td>" +
-      '<td><a href="' + esc(r.rel) + '">' + esc(r.title) + "</a>" + lc + "</td>" +
+      '<td class="num"><a href="' + esc(href(r)) + '">' + String(r.number).padStart(4, "0") + "</a></td>" +
+      '<td><a href="' + esc(href(r)) + '">' + esc(r.title) + "</a>" + lc + "</td>" +
       '<td class="diff">' + esc(r.difficulty) + "</td>" +
       '<td class="tags">' + esc(tags) + "</td>" +
       "</tr>";

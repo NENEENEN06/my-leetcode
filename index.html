@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeetCode Solutions · 索引</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 14px 16px 26px;
+         font: 14px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+         color: var(--foreground, #1f2328); background: var(--card, transparent); }
+  h1 { font-size: 17px; margin: 0 0 2px; font-weight: 650; }
+  .sub { margin: 0 0 11px; font-size: 12px; color: var(--muted-foreground, #656d76); }
+  .bar { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; margin-bottom: 7px; }
+  input[type="search"] { flex: 1 1 200px; min-width: 170px; padding: 6px 10px; font: inherit;
+        color: inherit; background: transparent; border: 1px solid var(--border, #d0d7de);
+        border-radius: 7px; outline: none; }
+  input[type="search"]:focus { border-color: var(--accent, #0969da); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { padding: 2px 9px; font-size: 12px; cursor: pointer; user-select: none;
+        color: var(--muted-foreground, #656d76); background: transparent;
+        border: 1px solid var(--border, #d0d7de); border-radius: 999px; }
+  .chip[aria-pressed="true"] { color: var(--foreground, #1f2328); border-color: var(--accent, #0969da);
+        background: color-mix(in srgb, var(--accent, #0969da) 12%, transparent); }
+  .count { font-size: 12px; color: var(--muted-foreground, #656d76); margin: 8px 0 6px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { padding: 5px 8px; text-align: left; border-bottom: 1px solid var(--border, #d8dee4);
+        vertical-align: top; }
+  th { font-size: 12px; font-weight: 600; color: var(--muted-foreground, #656d76); }
+  td.num { font-variant-numeric: tabular-nums; color: var(--muted-foreground, #656d76); white-space: nowrap; }
+  td.diff { white-space: nowrap; font-size: 12px; color: var(--muted-foreground, #656d76); }
+  td.tags { font-size: 12px; color: var(--muted-foreground, #656d76); }
+  a { color: var(--accent, #0969da); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lc { font-size: 11px; opacity: .75; margin-left: 6px; white-space: nowrap; }
+  #empty { display: none; padding: 14px 4px; color: var(--muted-foreground, #656d76); font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>LeetCode Solutions</h1>
+<p class="sub">按难度、算法筛选，或输入题号 / 标题 / 标签搜索；点题号打开本地题解。</p>
+<div class="bar">
+  <input id="q" type="search" placeholder="搜索题号 / 标题 / 标签，如 835、matrix、dp" autocomplete="off">
+  <span class="chips" id="diffs"></span>
+</div>
+<div class="bar"><span class="chips" id="topics"></span></div>
+<div class="count" id="count"></div>
+<table>
+  <thead><tr><th>#</th><th>Problem</th><th>Difficulty</th><th>Topics</th></tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+<div id="empty">没有匹配的题目。</div>
+<script>
+const DATA = [
+ {
+  "number": 2,
+  "title": "Add Two Numbers",
+  "difficulty": "Medium",
+  "topics": [
+   "Linked List",
+   "Math",
+   "Recursion"
+  ],
+  "rel": "solutions/0002-add-two-numbers/README.md",
+  "url": "https://leetcode.cn/problems/add-two-numbers/"
+ },
+ {
+  "number": 3,
+  "title": "Longest Substring Without Repeating Characters",
+  "difficulty": "Medium",
+  "topics": [
+   "Hash Table",
+   "String",
+   "Sliding Window"
+  ],
+  "rel": "solutions/0003-longest-substring-without-repeating-characters/README.md",
+  "url": "https://leetcode.cn/problems/longest-substring-without-repeating-characters/"
+ },
+ {
+  "number": 115,
+  "title": "Distinct Subsequences",
+  "difficulty": "Hard",
+  "topics": [
+   "String",
+   "Dynamic Programming"
+  ],
+  "rel": "solutions/0115-distinct-subsequences/README.md",
+  "url": "https://leetcode.cn/problems/distinct-subsequences/"
+ },
+ {
+  "number": 835,
+  "title": "Image Overlap",
+  "difficulty": "Medium",
+  "topics": [
+   "Array",
+   "Matrix"
+  ],
+  "rel": "solutions/0835-image-overlap/README.md",
+  "url": "https://leetcode.cn/problems/image-overlap/"
+ },
+ {
+  "number": 940,
+  "title": "Distinct Subsequences II",
+  "difficulty": "Hard",
+  "topics": [
+   "String",
+   "Dynamic Programming"
+  ],
+  "rel": "solutions/0940-distinct-subsequences-ii/README.md",
+  "url": "https://leetcode.cn/problems/distinct-subsequences-ii/"
+ },
+ {
+  "number": 2265,
+  "title": "Count Nodes Equal to Average of Subtree",
+  "difficulty": "Medium",
+  "topics": [
+   "Tree",
+   "Depth-First Search",
+   "Binary Tree"
+  ],
+  "rel": "solutions/2265-count-nodes-equal-to-average-of-subtree/README.md",
+  "url": "https://leetcode.cn/problems/count-nodes-equal-to-average-of-subtree/"
+ },
+ {
+  "number": 3483,
+  "title": "Unique 3-Digit Even Numbers",
+  "difficulty": "Easy",
+  "topics": [
+   "Enumeration",
+   "Array",
+   "Hash Table"
+  ],
+  "rel": "solutions/3483-unique-3-digit-even-numbers/README.md",
+  "url": "https://leetcode.cn/problems/unique-3-digit-even-numbers/"
+ },
+ {
+  "number": 3568,
+  "title": "Minimum Moves to Clean the Classroom",
+  "difficulty": "Medium",
+  "topics": [
+   "BFS",
+   "Bit Manipulation",
+   "Array",
+   "Matrix"
+  ],
+  "rel": "solutions/3568-minimum-moves-to-clean-the-classroom/README.md",
+  "url": "https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/"
+ },
+ {
+  "number": 3870,
+  "title": "Count Commas in Range",
+  "difficulty": "Easy",
+  "topics": [
+   "Math"
+  ],
+  "rel": "solutions/3870-count-commas-in-range/README.md",
+  "url": "https://leetcode.cn/problems/count-commas-in-range/description/?envType=daily-question&envId=2026-09-08"
+ },
+ {
+  "number": 3871,
+  "title": "Count Commas in Range II",
+  "difficulty": "Medium",
+  "topics": [
+   "Math"
+  ],
+  "rel": "solutions/3871-count-commas-in-range-ii/README.md",
+  "url": "https://leetcode.cn/problems/count-commas-in-range-ii/description/?envType=daily-question&envId=2026-09-09"
+ },
+ {
+  "number": 3875,
+  "title": "Construct Uniform Parity Array I",
+  "difficulty": "Easy",
+  "topics": [
+   "Array",
+   "Math"
+  ],
+  "rel": "solutions/3875-construct-uniform-parity-array-i/README.md",
+  "url": "https://leetcode.cn/problems/construct-uniform-parity-array-i/"
+ },
+ {
+  "number": 3876,
+  "title": "Construct Uniform Parity Array II",
+  "difficulty": "Medium",
+  "topics": [
+   "Array",
+   "Math"
+  ],
+  "rel": "solutions/3876-construct-uniform-parity-array-ii/README.md",
+  "url": "https://leetcode.cn/problems/construct-uniform-parity-array-ii/"
+ },
+ {
+  "number": 3903,
+  "title": "Smallest Stable Index I",
+  "difficulty": "Easy",
+  "topics": [
+   "Array",
+   "Prefix Sum"
+  ],
+  "rel": "solutions/3903-smallest-stable-index-i/README.md",
+  "url": "https://leetcode.cn/problems/smallest-stable-index-i/"
+ },
+ {
+  "number": 3904,
+  "title": "Smallest Stable Index II",
+  "difficulty": "Medium",
+  "topics": [
+   "Array",
+   "Prefix/Suffix Preprocessing"
+  ],
+  "rel": "solutions/3904-smallest-stable-index-ii/README.md",
+  "url": "https://leetcode.cn/problems/smallest-stable-index-ii/description/"
+ }
+];
+const state = { q: "", diff: "all", topic: "all" };
+const el = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function buildChips(container, values, key) {
+  const all = document.createElement("button");
+  all.className = "chip";
+  all.textContent = key === "diff" ? "全部难度" : "全部算法";
+  all.dataset.value = "all";
+  container.appendChild(all);
+  values.forEach((v) => {
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.textContent = v + " " + count(v, key);
+    b.dataset.value = v;
+    container.appendChild(b);
+  });
+  container.addEventListener("click", (e) => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    state[key] = chip.dataset.value;
+    render();
+  });
+}
+
+function count(value, key) {
+  if (value === "all") return "";
+  if (key === "diff") return DATA.filter((r) => r.difficulty === value).length;
+  return DATA.filter((r) => (r.topics || []).includes(value)).length;
+}
+
+function abbrsOf(r) {
+  // “Dynamic Programming” -> dp、“Depth-First Search” -> dfs，让习惯用缩写的搜索也能命中
+  return (r.topics || []).map((t) => t.split(/[\s/\-]+/).filter(Boolean).map((w) => w[0]).join("").toLowerCase())
+    .filter((a) => a.length >= 2);
+}
+
+function match(r) {
+  if (state.diff !== "all" && r.difficulty !== state.diff) return false;
+  if (state.topic !== "all" && !(r.topics || []).includes(state.topic)) return false;
+  const q = state.q.trim().toLowerCase();
+  if (!q) return true;
+  const hay = [String(r.number), String(r.number).padStart(4, "0"), r.title,
+    (r.topics || []).join(" "), abbrsOf(r).join(" ")]
+    .join(" ").toLowerCase();
+  return hay.includes(q);
+}
+
+function render() {
+  document.querySelectorAll(".chip").forEach((c) => {
+    const key = c.parentElement.id === "diffs" ? "diff" : "topic";
+    c.setAttribute("aria-pressed", String(state[key] === c.dataset.value));
+  });
+  const rows = DATA.filter(match);
+  el("rows") .innerHTML = rows.map((r) => {
+    const tags = (r.topics || []).join(", ");
+    const lc = r.url ? ' <a class="lc" href="' + esc(r.url) + '" target="_blank" rel="noreferrer">LeetCode &nearr;</a>' : "";
+    return "<tr>" +
+      '<td class="num"><a href="' + esc(r.rel) + '">' + String(r.number).padStart(4, "0") + "</a></td>" +
+      '<td><a href="' + esc(r.rel) + '">' + esc(r.title) + "</a>" + lc + "</td>" +
+      '<td class="diff">' + esc(r.difficulty) + "</td>" +
+      '<td class="tags">' + esc(tags) + "</td>" +
+      "</tr>";
+  }).join("");
+  el("count").textContent = "显示 " + rows.length + " / " + DATA.length + " 题";
+  el("empty").style.display = rows.length ? "none" : "block";
+}
+
+const diffs = [...new Set(DATA.map((r) => r.difficulty).filter(Boolean))]
+  .sort((a, b) => ["Easy", "Medium", "Hard"].indexOf(a) - ["Easy", "Medium", "Hard"].indexOf(b));
+const topics = [...new Set(DATA.flatMap((r) => r.topics || []))]
+  .sort((a, b) => DATA.filter((r) => r.topics.includes(b)).length - DATA.filter((r) => r.topics.includes(a)).length || a.localeCompare(b));
+buildChips(el("diffs"), diffs, "diff");
+buildChips(el("topics"), topics, "topic");
+el("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+render();
+</script>
+</body>
+</html>

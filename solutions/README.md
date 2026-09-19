@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 17 道题** · Easy 5 · Medium 10 · Hard 2
+**共 18 道题** · Easy 5 · Medium 11 · Hard 2
 
 ## 快速跳转
 
-**按难度**：[Easy 5](#easy--5-题) · [Medium 10](#medium--10-题) · [Hard 2](#hard--2-题)
+**按难度**：[Easy 5](#easy--5-题) · [Medium 11](#medium--11-题) · [Hard 2](#hard--2-题)
 
-**按算法**：[Array 8](#array--8-题) · [Math 7](#math--7-题) · [Dynamic Programming 4](#dynamic-programming--4-题) · [Hash Table 3](#hash-table--3-题) · [String 3](#string--3-题) · [Matrix 2](#matrix--2-题) · [Sliding Window 2](#sliding-window--2-题) · [BFS 1](#bfs--1-题) · [Binary Search 1](#binary-search--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Enumeration 1](#enumeration--1-题) · [Geometry 1](#geometry--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 8](#array--8-题) · [Math 8](#math--8-题) · [Dynamic Programming 4](#dynamic-programming--4-题) · [Hash Table 3](#hash-table--3-题) · [String 3](#string--3-题) · [Geometry 2](#geometry--2-题) · [Matrix 2](#matrix--2-题) · [Sliding Window 2](#sliding-window--2-题) · [BFS 1](#bfs--1-题) · [Binary Search 1](#binary-search--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Enumeration 1](#enumeration--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -24,6 +24,7 @@
 | [0835](0835-image-overlap/README.md) | Image Overlap | Medium | Array, Matrix |
 | [0836](0836-rectangle-overlap/README.md) | Rectangle Overlap | Easy | Math, Geometry |
 | [0940](0940-distinct-subsequences-ii/README.md) | Distinct Subsequences II | Hard | String, Dynamic Programming |
+| [1401](1401-circle-and-rectangle-overlapping/README.md) | Circle and Rectangle Overlapping | Medium | Math, Geometry |
 | [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Array, Hash Table, Binary Search, Dynamic Programming, Sliding Window |
 | [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) | Number of Sets of K Non-Overlapping Line Segments | Medium | Math, Dynamic Programming, Combinatorics |
 | [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) | Count Nodes Equal to Average of Subtree | Medium | Tree, Depth-First Search, Binary Tree |
@@ -36,7 +37,7 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 
-共 17 道题。
+共 18 道题。
 
 ## 按难度
 
@@ -48,11 +49,12 @@
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 
-### Medium · 10 题
+### Medium · 11 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
 - [0835](0835-image-overlap/README.md) Image Overlap · Array, Matrix
+- [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Math, Geometry
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Array, Hash Table, Binary Search, Dynamic Programming, Sliding Window
 - [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Math, Dynamic Programming, Combinatorics
 - [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Tree, Depth-First Search, Binary Tree
@@ -79,10 +81,11 @@
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
 
-### Math · 7 题
+### Math · 8 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
+- [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Medium
 - [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
 - [3870](3870-count-commas-in-range/README.md) Count Commas in Range · Easy
 - [3871](3871-count-commas-in-range-ii/README.md) Count Commas in Range II · Medium
@@ -107,6 +110,11 @@
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
 - [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
 - [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
+
+### Geometry · 2 题
+
+- [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
+- [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Medium
 
 ### Matrix · 2 题
 
@@ -145,10 +153,6 @@
 ### Enumeration · 1 题
 
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
-
-### Geometry · 1 题
-
-- [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
 
 ### Linked List · 1 题
 

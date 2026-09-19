@@ -3,53 +3,250 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LeetCode Solutions · 索引</title>
+<title>题解索引 · LeetCode</title>
 <style>
-  :root { color-scheme: light dark; }
-  body { margin: 0; padding: 14px 16px 26px;
-         font: 14px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-         color: var(--foreground, #1f2328); background: var(--card, transparent); }
-  h1 { font-size: 17px; margin: 0 0 2px; font-weight: 650; }
-  .sub { margin: 0 0 11px; font-size: 12px; color: var(--muted-foreground, #656d76); }
-  .bar { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; margin-bottom: 7px; }
-  input[type="search"] { flex: 1 1 200px; min-width: 170px; padding: 6px 10px; font: inherit;
-        color: inherit; background: transparent; border: 1px solid var(--border, #d0d7de);
-        border-radius: 7px; outline: none; }
-  input[type="search"]:focus { border-color: var(--accent, #0969da); }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { padding: 2px 9px; font-size: 12px; cursor: pointer; user-select: none;
-        color: var(--muted-foreground, #656d76); background: transparent;
-        border: 1px solid var(--border, #d0d7de); border-radius: 999px; }
-  .chip[aria-pressed="true"] { color: var(--foreground, #1f2328); border-color: var(--accent, #0969da);
-        background: color-mix(in srgb, var(--accent, #0969da) 12%, transparent); }
-  .count { font-size: 12px; color: var(--muted-foreground, #656d76); margin: 8px 0 6px; }
-  table { border-collapse: collapse; width: 100%; }
-  th, td { padding: 5px 8px; text-align: left; border-bottom: 1px solid var(--border, #d8dee4);
-        vertical-align: top; }
-  th { font-size: 12px; font-weight: 600; color: var(--muted-foreground, #656d76); }
-  td.num { font-variant-numeric: tabular-nums; color: var(--muted-foreground, #656d76); white-space: nowrap; }
-  td.diff { white-space: nowrap; font-size: 12px; color: var(--muted-foreground, #656d76); }
-  td.tags { font-size: 12px; color: var(--muted-foreground, #656d76); }
-  a { color: var(--accent, #0969da); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .lc { font-size: 11px; opacity: .75; margin-left: 6px; white-space: nowrap; }
-  #empty { display: none; padding: 14px 4px; color: var(--muted-foreground, #656d76); font-size: 13px; }
+  :root{
+    color-scheme: light dark;
+    --paper:#f1f4f8; --surface:#fbfcfe; --ink:#0f1420; --muted:#5b6675;
+    --rule:#dce3eb; --accent:#1f4fd8; --accent-soft:#1f4fd814;
+    --easy:#1e7a4f; --medium:#a8690a; --hard:#b3261e;
+    --mono:ui-monospace,SFMono-Regular,"JetBrains Mono","Cascadia Mono",Menlo,Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    --serif:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+    --shadow:none;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#0d1015; --surface:#12161d; --ink:#e6eaf2; --muted:#95a0b0;
+      --rule:#252c36; --accent:#86a9ff; --accent-soft:#86a9ff1f;
+      --easy:#4fb07c; --medium:#d9a13a; --hard:#e0776e;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; padding:0 20px 56px;
+    font:14px/1.65 var(--sans); color:var(--ink); background:var(--paper);
+  }
+  .wrap{max-width:980px; margin:0 auto}
+  a{color:inherit; text-decoration:none}
+  a:focus-visible,button:focus-visible,input:focus-visible{
+    outline:2px solid var(--accent); outline-offset:2px; border-radius:3px;
+  }
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+  /* ---- masthead ---- */
+  header.mast{padding:44px 0 0}
+  .mast-top{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px}
+  h1{
+    font-family:var(--serif); font-size:clamp(30px,5.4vw,42px); font-weight:600;
+    letter-spacing:.01em; margin:0; line-height:1.1;
+  }
+  .mast-meta{
+    font-family:var(--mono); font-size:12px; color:var(--muted); letter-spacing:.02em;
+    margin-left:auto;
+  }
+  .lede{margin:10px 0 0; max-width:60ch; color:var(--muted); font-size:13.5px}
+
+  /* ---- the ruler: proportional difficulty bar, also the filter ---- */
+  .ruler{margin:26px 0 0; position:relative}
+  .ruler-track{
+    display:flex; height:58px; border:1px solid var(--rule); background:var(--surface);
+    border-radius:2px; overflow:hidden;
+  }
+  .seg{
+    appearance:none; border:0; margin:0; padding:0 10px; font:inherit; cursor:pointer;
+    display:flex; align-items:center; gap:9px; background:transparent; color:var(--muted);
+    border-right:1px solid var(--rule); min-width:0;
+    transform-origin:left center;
+  }
+  .seg:last-child{border-right:0}
+  .seg[aria-pressed="true"]{background:var(--accent-soft); color:var(--ink)}
+  .seg:hover{color:var(--ink)}
+  .seg .swatch{width:9px; height:9px; border-radius:1px; flex:0 0 auto}
+  .seg[data-d="Easy"] .swatch{background:var(--easy)}
+  .seg[data-d="Medium"] .swatch{background:var(--medium)}
+  .seg[data-d="Hard"] .swatch{background:var(--hard)}
+  .seg[data-d="Easy"]{background:#1e7a4f0f}
+  .seg[data-d="Medium"]{background:#a8690a0f}
+  .seg[data-d="Hard"]{background:#b3261e0f}
+  .seg[aria-pressed="true"]{background:var(--accent-soft); color:var(--ink)}
+  .seg[aria-pressed="true"] .name{font-weight:600}
+  .seg .name{font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .seg .n{font-family:var(--mono); font-size:12px; font-variant-numeric:tabular-nums; opacity:.85}
+  .ruler-foot{
+    display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center;
+    margin-top:9px; font-size:12px; color:var(--muted);
+  }
+  .reset{
+    appearance:none; background:transparent; border:0; padding:2px 0; font:inherit;
+    color:var(--accent); cursor:pointer; text-decoration:underline; text-underline-offset:3px;
+  }
+  .reset[hidden]{display:none}
+
+  /* ---- controls ---- */
+  .controls{margin:34px 0 0; display:flex; flex-direction:column; gap:12px}
+  .search{display:block}
+  #q{
+    width:100%; padding:11px 13px; font:inherit; color:inherit; background:var(--surface);
+    border:1px solid var(--rule); border-radius:2px; appearance:none;
+  }
+  #q::placeholder{color:var(--muted)}
+  .topics{display:flex; flex-wrap:wrap; gap:6px}
+  .tag{
+    appearance:none; font:inherit; font-size:12px; padding:3px 9px; cursor:pointer;
+    color:var(--muted); background:transparent; border:1px solid var(--rule); border-radius:2px;
+  }
+  .tag:hover{color:var(--ink); border-color:var(--muted)}
+  .tag[aria-pressed="true"]{color:var(--ink); border-color:var(--accent); background:var(--accent-soft)}
+  .tag .n{font-family:var(--mono); opacity:.7; margin-left:5px}
+
+  /* ---- tally ---- */
+  .tally{
+    margin:22px 0 4px; padding-bottom:9px; border-bottom:1px solid var(--ink);
+    font-size:12.5px; color:var(--muted); display:flex; gap:12px; flex-wrap:wrap; align-items:baseline;
+  }
+  .tally b{font-weight:600; color:var(--ink)}
+  .tally .spacer{margin-left:auto; font-family:var(--mono); font-size:11.5px}
+
+  /* ---- list ---- */
+  table{width:100%; border-collapse:collapse; table-layout:fixed}
+  th,td{text-align:left; vertical-align:baseline}
+  thead th{
+    font-size:11.5px; font-weight:500; color:var(--muted); padding:10px 10px 8px 0;
+    border-bottom:1px solid var(--rule); white-space:nowrap;
+  }
+  tbody td{padding:9px 10px 9px 0; border-bottom:1px solid var(--rule)}
+  col.c-num{width:74px} col.c-diff{width:104px} col.c-topics{width:38%}
+  td.num{
+    font-family:var(--mono); font-size:13.5px; font-variant-numeric:tabular-nums;
+    color:var(--muted); white-space:nowrap;
+  }
+  tr.row:hover td{background:var(--accent-soft)}
+  tr.row:hover td.num a{color:var(--accent)}
+  td.title a.t{font-size:14.5px}
+  tr.row:hover td.title a.t{text-decoration:underline; text-underline-offset:3px}
+  .lc{font-family:var(--mono); font-size:11px; color:var(--muted); margin-left:9px; white-space:nowrap;
+      opacity:0; transition:opacity .12s ease}
+  tr.row:hover .lc, tr.row:focus-within .lc{opacity:1}
+  .lc:hover{color:var(--accent)}
+  @media (hover:none){.lc{opacity:1}}
+  td.diff .swatch{
+    display:inline-block; width:8px; height:8px; border-radius:1px; margin-right:7px;
+  }
+  td.diff[data-d="Easy"] .swatch{background:var(--easy)}
+  td.diff[data-d="Medium"] .swatch{background:var(--medium)}
+  td.diff[data-d="Hard"] .swatch{background:var(--hard)}
+  td.diff{font-size:12.5px; color:var(--muted); white-space:nowrap}
+  td.topics{font-size:12px; color:var(--muted)}
+  td.topics button{
+    appearance:none; background:transparent; border:0; font:inherit; font-size:12px;
+    color:var(--muted); cursor:pointer; padding:1px 0; margin-right:9px;
+  }
+  td.topics button:hover{color:var(--accent); text-decoration:underline; text-underline-offset:3px}
+  td.topics button[aria-pressed="true"]{color:var(--accent)}
+  tr.group th{
+    padding:22px 0 7px; font-weight:600; font-size:12.5px; border-bottom:1px solid var(--rule);
+  }
+  tr.group th .g-n{
+    font-family:var(--mono); font-weight:400; font-size:11.5px; color:var(--muted); margin-left:9px;
+  }
+  tr.group:first-child th{padding-top:6px}
+  #empty{padding:26px 0; color:var(--muted)}
+  #empty[hidden]{display:none}
+
+  footer{
+    margin-top:40px; padding-top:14px; border-top:1px solid var(--rule);
+    display:flex; flex-wrap:wrap; gap:8px 16px; font-size:12px; color:var(--muted);
+  }
+  footer code{font-family:var(--mono); font-size:11.5px}
+
+  /* ---- responsive: below 720px the table becomes stacked rows ---- */
+  @media (max-width:720px){
+    body{padding:0 14px 44px}
+    header.mast{padding-top:32px}
+    .mast-meta{margin-left:0; width:100%}
+    .ruler-track{height:62px}
+    .seg{padding:0 9px; gap:5px; flex-direction:column; align-items:flex-start; justify-content:center}
+    /* 表格退化成两列网格：左列题号/难度，右列标题/算法 */
+    table,thead,tbody,tr.row,tr.row td{display:block}
+    thead{display:none}
+    tbody{display:block}
+    tr.row{
+      display:grid; grid-template-columns:80px 1fr; column-gap:12px; row-gap:3px;
+      padding:12px 0; border-bottom:1px solid var(--rule);
+    }
+    tr.row td{border:0; padding:0}
+    td.num{grid-column:1; grid-row:1; font-size:13px}
+    td.title{grid-column:2; grid-row:1}
+    td.diff{grid-column:1; grid-row:2; font-size:12px}
+    td.topics{grid-column:2; grid-row:2; font-size:11.5px; line-height:1.5}
+    td.topics button{margin-right:7px}
+    .lc{opacity:1; margin-left:7px}
+    tr.group{display:block; border:0}
+    tr.group th{display:block; padding:22px 0 6px; border-bottom:1px solid var(--rule)}
+    td.title a.t{font-size:14.5px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important}
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .seg{animation:grow .5s cubic-bezier(.22,.8,.28,1) both}
+    .seg:nth-child(2){animation-delay:.07s}
+    .seg:nth-child(3){animation-delay:.14s}
+    @keyframes grow{from{opacity:0; transform:scaleX(.4)} to{opacity:1; transform:scaleX(1)}}
+  }
 </style>
 </head>
 <body>
-<h1>LeetCode Solutions</h1>
-<p class="sub">按难度、算法筛选，或输入题号 / 标题 / 标签搜索；点题号打开本地题解。</p>
-<div class="bar">
-  <input id="q" type="search" placeholder="搜索题号 / 标题 / 标签，如 835、matrix、dp" autocomplete="off">
-  <span class="chips" id="diffs"></span>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="mast-top">
+      <h1>题解索引</h1>
+      <p class="mast-meta" id="meta"></p>
+    </div>
+    <p class="lede">按难度、算法筛选，或直接搜题号 / 标题 / 标签（缩写也行：<code>dp</code>、<code>bfs</code>）。点题号打开题解原文。</p>
+    <div class="ruler">
+      <div class="ruler-track" id="ruler" role="group" aria-label="按难度筛选"></div>
+      <div class="ruler-foot">
+        <span id="ruler-hint"></span>
+        <button class="reset" id="reset" hidden>清除筛选</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="controls">
+      <label class="search">
+        <span class="sr-only">搜索题目</span>
+        <input id="q" type="search" placeholder="搜索题号 / 标题 / 标签，如 1401、rectangle、sliding window" autocomplete="off">
+      </label>
+      <div class="topics" id="topics" role="group" aria-label="按算法筛选"></div>
+    </div>
+
+    <p class="tally" id="tally"></p>
+
+    <table id="table">
+      <caption class="sr-only">题解列表：题号、题目、难度、算法</caption>
+      <colgroup><col class="c-num"><col class="c-title"><col class="c-diff"><col class="c-topics"></colgroup>
+      <thead>
+        <tr>
+          <th scope="col">题号</th><th scope="col">题目</th><th scope="col">难度</th>
+          <th scope="col" class="topics-col">算法</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p id="empty" hidden>没有匹配的题目。换个关键词，或点上面的「清除筛选」。</p>
+  </main>
+
+  <footer>
+    <span id="foot-note"></span>
+    <span id="foot-link"></span>
+  </footer>
 </div>
-<div class="bar"><span class="chips" id="topics"></span></div>
-<div class="count" id="count"></div>
-<table>
-  <thead><tr><th>#</th><th>Problem</th><th>Difficulty</th><th>Topics</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
-<div id="empty">没有匹配的题目。</div>
+
 <script>
 const DATA = [
  {
@@ -277,86 +474,149 @@ const DATA = [
   "url": "https://leetcode.cn/problems/smallest-stable-index-ii/description/"
  }
 ];
+const DIFF_ORDER = ["Easy", "Medium", "Hard"];
 const state = { q: "", diff: "all", topic: "all" };
 const el = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const pad = (n) => String(n).padStart(4, "0");
 
-function buildChips(container, values, key) {
-  const all = document.createElement("button");
-  all.className = "chip";
-  all.textContent = key === "diff" ? "全部难度" : "全部算法";
-  all.dataset.value = "all";
-  container.appendChild(all);
-  values.forEach((v) => {
+/* 托管的 Pages 上裸 .md 只能当文本下载，所以 http(s) 下指向 GitHub 渲染页；本地双击仍走相对路径 */
+const href = (r) => (location.protocol === "file:" || !r.gh) ? r.rel : r.gh;
+
+function abbrsOf(r) {
+  return (r.topics || []).map((t) => t.split(/[\s/\-]+/).filter(Boolean).map((w) => w[0]).join("").toLowerCase())
+    .filter((a) => a.length >= 2);
+}
+function match(r) {
+  if (state.diff !== "all" && r.difficulty !== state.diff) return false;
+  if (state.topic !== "all" && !(r.topics || []).includes(state.topic)) return false;
+  const q = state.q.trim().toLowerCase();
+  if (!q) return true;
+  return [String(r.number), pad(r.number), r.title, (r.topics || []).join(" "), abbrsOf(r).join(" ")]
+    .join(" ").toLowerCase().includes(q);
+}
+const countBy = (key, value) => key === "diff"
+  ? DATA.filter((r) => r.difficulty === value).length
+  : DATA.filter((r) => (r.topics || []).includes(value)).length;
+
+/* ---- 难度刻度尺：段宽 = 题量占比，点段即筛选 ---- */
+function buildRuler() {
+  const box = el("ruler");
+  const present = DIFF_ORDER.filter((d) => DATA.some((r) => r.difficulty === d));
+  present.forEach((d) => {
+    const n = countBy("diff", d);
     const b = document.createElement("button");
-    b.className = "chip";
-    b.textContent = v + " " + count(v, key);
-    b.dataset.value = v;
-    container.appendChild(b);
+    b.className = "seg"; b.type = "button"; b.dataset.d = d;
+    b.style.flex = n + " 1 0";
+    b.innerHTML = '<span class="swatch"></span><span class="name">' + esc(d) + '</span><span class="n">' + n + "</span>";
+    b.setAttribute("aria-pressed", "false");
+    box.appendChild(b);
   });
-  container.addEventListener("click", (e) => {
-    const chip = e.target.closest(".chip");
-    if (!chip) return;
-    state[key] = chip.dataset.value;
+  if (DATA.some((r) => !r.difficulty)) {
+    const b = document.createElement("button");
+    b.className = "seg"; b.type = "button"; b.dataset.d = "—";
+    b.style.flex = "1 1 0";
+    b.innerHTML = '<span class="name">未标注</span>';
+    box.appendChild(b);
+  }
+  box.addEventListener("click", (e) => {
+    const seg = e.target.closest(".seg");
+    if (!seg) return;
+    const d = seg.dataset.d == null ? "" : seg.dataset.d;
+    state.diff = (state.diff === d) ? "all" : (d === "" ? "all" : d);
     render();
   });
 }
 
-function count(value, key) {
-  if (value === "all") return "";
-  if (key === "diff") return DATA.filter((r) => r.difficulty === value).length;
-  return DATA.filter((r) => (r.topics || []).includes(value)).length;
+function buildTopics() {
+  const box = el("topics");
+  const topics = [...new Set(DATA.flatMap((r) => r.topics || []))]
+    .sort((a, b) => countBy("topic", b) - countBy("topic", a) || a.localeCompare(b));
+  topics.forEach((t) => {
+    const b = document.createElement("button");
+    b.className = "tag"; b.type = "button"; b.dataset.value = t;
+    b.innerHTML = esc(t) + '<span class="n">' + countBy("topic", t) + "</span>";
+    b.setAttribute("aria-pressed", "false");
+    box.appendChild(b);
+  });
+  box.addEventListener("click", (e) => {
+    const chip = e.target.closest(".tag");
+    if (!chip) return;
+    state.topic = state.topic === chip.dataset.value ? "all" : chip.dataset.value;
+    render();
+  });
 }
 
-function abbrsOf(r) {
-  // “Dynamic Programming” -> dp、“Depth-First Search” -> dfs，让习惯用缩写的搜索也能命中
-  return (r.topics || []).map((t) => t.split(/[\s/\-]+/).filter(Boolean).map((w) => w[0]).join("").toLowerCase())
-    .filter((a) => a.length >= 2);
-}
-
-function match(r) {
-if (state.diff !== "all" && r.difficulty !== state.diff) return false;
-if (state.topic !== "all" && !(r.topics || []).includes(state.topic)) return false;
-const q = state.q.trim().toLowerCase();
-if (!q) return true;
-const hay = [String(r.number), String(r.number).padStart(4, "0"), r.title,
-(r.topics || []).join(" "), abbrsOf(r).join(" ")]
-.join(" ").toLowerCase();
-return hay.includes(q);
-}
-
-// 本地双击打开 -> 跳本地题解；托管在 GitHub Pages / 任何 http 下 -> 跳 GitHub 渲染页（裸 .md 在 Pages 上只能当文本下载）
-function href(r) {
-return (location.protocol === "file:" || !r.gh) ? r.rel : r.gh;
+function topicButtons(r, pressed) {
+  return (r.topics || []).map((t) =>
+    '<button type="button" data-topic="' + esc(t) + '"' + (pressed ? ' aria-pressed="true"' : "") + ">" + esc(t) + "</button>"
+  ).join("");
 }
 
 function render() {
-  document.querySelectorAll(".chip").forEach((c) => {
-    const key = c.parentElement.id === "diffs" ? "diff" : "topic";
-    c.setAttribute("aria-pressed", String(state[key] === c.dataset.value));
+  document.querySelectorAll(".seg").forEach((s) => {
+    const v = s.dataset.d == null ? "" : s.dataset.d;
+    s.setAttribute("aria-pressed", String(v !== "" && state.diff === v));
   });
+  document.querySelectorAll(".tag").forEach((c) =>
+    c.setAttribute("aria-pressed", String(state.topic === c.dataset.value)));
+
   const rows = DATA.filter(match);
-  el("rows") .innerHTML = rows.map((r) => {
-    const tags = (r.topics || []).join(", ");
-    const lc = r.url ? ' <a class="lc" href="' + esc(r.url) + '" target="_blank" rel="noreferrer">LeetCode &nearr;</a>' : "";
-    return "<tr>" +
-      '<td class="num"><a href="' + esc(href(r)) + '">' + String(r.number).padStart(4, "0") + "</a></td>" +
-      '<td><a href="' + esc(href(r)) + '">' + esc(r.title) + "</a>" + lc + "</td>" +
-      '<td class="diff">' + esc(r.difficulty) + "</td>" +
-      '<td class="tags">' + esc(tags) + "</td>" +
-      "</tr>";
-  }).join("");
-  el("count").textContent = "显示 " + rows.length + " / " + DATA.length + " 题";
-  el("empty").style.display = rows.length ? "none" : "block";
+  const grouped = state.diff === "all" && state.topic === "all" && !state.q.trim();
+  const order = grouped ? DIFF_ORDER.concat(["—"]) : ["all"];
+  let html = "";
+  let shown = 0;
+  order.forEach((d) => {
+    const bucket = d === "all" ? rows : rows.filter((r) => (r.difficulty || "—") === d);
+    if (!bucket.length) return;
+    if (grouped) html += '<tr class="group"><th colspan="4" scope="colgroup">' + esc(d === "—" ? "未标注" : d) + '<span class="g-n">' + bucket.length + " 题</span></th></tr>";
+    bucket.forEach((r) => {
+      shown++;
+      const lc = r.url ? ' <a class="lc" href="' + esc(r.url) + '" target="_blank" rel="noreferrer">LeetCode&nbsp;↗</a>' : "";
+      html += '<tr class="row">' +
+        '<td class="num"><a href="' + esc(href(r)) + '">' + pad(r.number) + "</a></td>" +
+        '<td class="title"><a class="t" href="' + esc(href(r)) + '">' + esc(r.title) + "</a>" + lc + "</td>" +
+        '<td class="diff" data-d="' + esc(r.difficulty || "") + '"><span class="swatch"></span>' + esc(r.difficulty || "—") + "</td>" +
+        '<td class="topics">' + topicButtons(r, false) + "</td>" +
+        "</tr>";
+    });
+  });
+  el("rows").innerHTML = html;
+
+  const topicsMatched = new Set(rows.flatMap((r) => r.topics || [])).size;
+  el("tally").innerHTML = rows.length === DATA.length
+    ? "<span>全部 <b>" + DATA.length + "</b> 题</span><span>" + topicsMatched + " 种算法标记</span>"
+    : "<span>匹配 <b>" + rows.length + "</b> / " + DATA.length + " 题</span>";
+
+  el("meta").textContent = DATA.length + " 题  ·  " +
+    DIFF_ORDER.filter((d) => countBy("diff", d)).map((d) => d + " " + countBy("diff", d)).join("  /  ");
+  const filtered = state.diff !== "all" || state.topic !== "all" || !!state.q.trim();
+  el("reset").hidden = !filtered;
+  el("ruler-hint").textContent = state.diff === "all"
+    ? "点段筛选难度，再点一次取消"
+    : "当前只看 " + state.diff;
+  el("empty").hidden = rows.length > 0;
+  el("table").hidden = rows.length === 0;
 }
 
-const diffs = [...new Set(DATA.map((r) => r.difficulty).filter(Boolean))]
-  .sort((a, b) => ["Easy", "Medium", "Hard"].indexOf(a) - ["Easy", "Medium", "Hard"].indexOf(b));
-const topics = [...new Set(DATA.flatMap((r) => r.topics || []))]
-  .sort((a, b) => DATA.filter((r) => r.topics.includes(b)).length - DATA.filter((r) => r.topics.includes(a)).length || a.localeCompare(b));
-buildChips(el("diffs"), diffs, "diff");
-buildChips(el("topics"), topics, "topic");
 el("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+el("reset").addEventListener("click", () => {
+  state.q = ""; state.diff = "all"; state.topic = "all"; el("q").value = ""; render();
+});
+el("rows").addEventListener("click", (e) => {
+  const t = e.target.closest("button[data-topic]");
+  if (!t) return;
+  state.topic = state.topic === t.dataset.topic ? "all" : t.dataset.topic;
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+el("foot-note").innerHTML = "索引由 <code>scripts/generate_index.py</code> 生成，题解存于仓库 <code>solutions/</code>。";
+if (DATA[0] && DATA[0].gh) {
+  const base = DATA[0].gh.split("/blob/")[0];
+  el("foot-link").innerHTML = '<a href="' + esc(base) + '">仓库主页 ↗</a>';
+}
+buildRuler();
+buildTopics();
 render();
 </script>
 </body>

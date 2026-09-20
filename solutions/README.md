@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 18 道题** · Easy 5 · Medium 11 · Hard 2
+**共 19 道题** · Easy 6 · Medium 11 · Hard 2
 
 ## 快速跳转
 
-**按难度**：[Easy 5](#easy--5-题) · [Medium 11](#medium--11-题) · [Hard 2](#hard--2-题)
+**按难度**：[Easy 6](#easy--6-题) · [Medium 11](#medium--11-题) · [Hard 2](#hard--2-题)
 
-**按算法**：[Array 8](#array--8-题) · [Math 8](#math--8-题) · [Dynamic Programming 4](#dynamic-programming--4-题) · [Hash Table 3](#hash-table--3-题) · [String 3](#string--3-题) · [Geometry 2](#geometry--2-题) · [Matrix 2](#matrix--2-题) · [Sliding Window 2](#sliding-window--2-题) · [BFS 1](#bfs--1-题) · [Binary Search 1](#binary-search--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Enumeration 1](#enumeration--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 8](#array--8-题) · [Math 8](#math--8-题) · [Dynamic Programming 4](#dynamic-programming--4-题) · [String 4](#string--4-题) · [Hash Table 3](#hash-table--3-题) · [Geometry 2](#geometry--2-题) · [Matrix 2](#matrix--2-题) · [Sliding Window 2](#sliding-window--2-题) · [BFS 1](#bfs--1-题) · [Binary Search 1](#binary-search--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Enumeration 1](#enumeration--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -29,6 +29,7 @@
 | [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) | Number of Sets of K Non-Overlapping Line Segments | Medium | Math, Dynamic Programming, Combinatorics |
 | [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) | Count Nodes Equal to Average of Subtree | Medium | Tree, Depth-First Search, Binary Tree |
 | [3483](3483-unique-3-digit-even-numbers/README.md) | Unique 3-Digit Even Numbers | Easy | Enumeration, Array, Hash Table |
+| [3498](3498-reverse-degree-of-a-string/README.md) | Reverse Degree of a String | Easy | String, Simulation |
 | [3568](3568-minimum-moves-to-clean-the-classroom/README.md) | Minimum Moves to Clean the Classroom | Medium | BFS, Bit Manipulation, Array, Matrix |
 | [3870](3870-count-commas-in-range/README.md) | Count Commas in Range | Easy | Math |
 | [3871](3871-count-commas-in-range-ii/README.md) | Count Commas in Range II | Medium | Math |
@@ -37,14 +38,15 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 
-共 18 道题。
+共 19 道题。
 
 ## 按难度
 
-### Easy · 5 题
+### Easy · 6 题
 
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Math, Geometry
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Enumeration, Array, Hash Table
+- [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · String, Simulation
 - [3870](3870-count-commas-in-range/README.md) Count Commas in Range · Math
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
@@ -99,17 +101,18 @@
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
 - [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
 
+### String · 4 题
+
+- [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
+- [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
+- [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
+- [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · Easy
+
 ### Hash Table · 3 题
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
-
-### String · 3 题
-
-- [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
-- [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
-- [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
 
 ### Geometry · 2 题
 
@@ -169,6 +172,10 @@
 ### Recursion · 1 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
+
+### Simulation · 1 题
+
+- [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · Easy
 
 ### Tree · 1 题
 

@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 30 道题** · Easy 9 · Medium 18 · Hard 3
+**共 31 道题** · Easy 10 · Medium 18 · Hard 3
 
 ## 快速跳转
 
-**按难度**：[Easy 9](#easy--9-题) · [Medium 18](#medium--18-题) · [Hard 3](#hard--3-题)
+**按难度**：[Easy 10](#easy--10-题) · [Medium 18](#medium--18-题) · [Hard 3](#hard--3-题)
 
-**按算法**：[Array 12](#array--12-题) · [String 12](#string--12-题) · [Math 10](#math--10-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Stack 6](#stack--6-题) · [Hash Table 4](#hash-table--4-题) · [Matrix 3](#matrix--3-题) · [Geometry 2](#geometry--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Search 1](#binary-search--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Enumeration 1](#enumeration--1-题) · [Greedy 1](#greedy--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[String 13](#string--13-题) · [Array 12](#array--12-题) · [Math 10](#math--10-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Stack 7](#stack--7-题) · [Hash Table 4](#hash-table--4-题) · [Matrix 3](#matrix--3-题) · [Geometry 2](#geometry--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Search 1](#binary-search--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Enumeration 1](#enumeration--1-题) · [Greedy 1](#greedy--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -28,6 +28,7 @@
 | [0856](0856-score-of-parentheses/README.md) | Score of Parentheses | Medium | String, Stack |
 | [0921](0921-minimum-add-to-make-parentheses-valid/README.md) | Minimum Add to Make Parentheses Valid | Medium | String, Stack, Greedy |
 | [0940](0940-distinct-subsequences-ii/README.md) | Distinct Subsequences II | Hard | String, Dynamic Programming |
+| [1021](1021-remove-outermost-parentheses/README.md) | Remove Outermost Parentheses | Easy | String, Stack |
 | [1111](1111-maximum-nesting-depth-of-two-valid-parentheses-strings/README.md) | Maximum Nesting Depth of Two Valid Parentheses Strings | Medium | String, Stack |
 | [1190](1190-reverse-substrings-between-each-pair-of-parentheses/README.md) | Reverse Substrings Between Each Pair of Parentheses | Medium | String, Stack |
 | [1401](1401-circle-and-rectangle-overlapping/README.md) | Circle and Rectangle Overlapping | Medium | Math, Geometry |
@@ -49,14 +50,15 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 
-共 30 道题。
+共 31 道题。
 
 ## 按难度
 
-### Easy · 9 题
+### Easy · 10 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · String, Stack
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Math, Geometry
+- [1021](1021-remove-outermost-parentheses/README.md) Remove Outermost Parentheses · String, Stack
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · String, Stack
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Enumeration, Array, Hash Table
 - [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · String, Simulation
@@ -94,6 +96,22 @@
 
 ## 按算法
 
+### String · 13 题
+
+- [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
+- [0020](0020-valid-parentheses/README.md) Valid Parentheses · Easy
+- [0022](0022-generate-parentheses/README.md) Generate Parentheses · Medium
+- [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
+- [0856](0856-score-of-parentheses/README.md) Score of Parentheses · Medium
+- [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
+- [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
+- [1021](1021-remove-outermost-parentheses/README.md) Remove Outermost Parentheses · Easy
+- [1111](1111-maximum-nesting-depth-of-two-valid-parentheses-strings/README.md) Maximum Nesting Depth of Two Valid Parentheses Strings · Medium
+- [1190](1190-reverse-substrings-between-each-pair-of-parentheses/README.md) Reverse Substrings Between Each Pair of Parentheses · Medium
+- [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · Easy
+- [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
+- [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · Easy
+
 ### Array · 12 题
 
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
@@ -108,21 +126,6 @@
 - [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Medium
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
-
-### String · 12 题
-
-- [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
-- [0020](0020-valid-parentheses/README.md) Valid Parentheses · Easy
-- [0022](0022-generate-parentheses/README.md) Generate Parentheses · Medium
-- [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
-- [0856](0856-score-of-parentheses/README.md) Score of Parentheses · Medium
-- [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
-- [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
-- [1111](1111-maximum-nesting-depth-of-two-valid-parentheses-strings/README.md) Maximum Nesting Depth of Two Valid Parentheses Strings · Medium
-- [1190](1190-reverse-substrings-between-each-pair-of-parentheses/README.md) Reverse Substrings Between Each Pair of Parentheses · Medium
-- [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · Easy
-- [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
-- [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · Easy
 
 ### Math · 10 题
 
@@ -147,11 +150,12 @@
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
 
-### Stack · 6 题
+### Stack · 7 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · Easy
 - [0856](0856-score-of-parentheses/README.md) Score of Parentheses · Medium
 - [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
+- [1021](1021-remove-outermost-parentheses/README.md) Remove Outermost Parentheses · Easy
 - [1111](1111-maximum-nesting-depth-of-two-valid-parentheses-strings/README.md) Maximum Nesting Depth of Two Valid Parentheses Strings · Medium
 - [1190](1190-reverse-substrings-between-each-pair-of-parentheses/README.md) Reverse Substrings Between Each Pair of Parentheses · Medium
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · Easy

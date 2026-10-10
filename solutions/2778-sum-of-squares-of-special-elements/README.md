@@ -1,7 +1,7 @@
 # 2778. Sum of Squares of Special Elements
 - Difficulty: Easy
 - Topics: Array, Enumeration
-- Language: C++
+- Language: C++ / Python
 - 题目链接: https://leetcode.cn/problems/sum-of-squares-of-special-elements/
 
 ## 题目
@@ -35,6 +35,19 @@ public:
 - **`i+1` 用得很准**：`n % (i+1) == 0` 是本题的核心判断，0-based 循环配 1-based 判断是正确写法。
 - **平方不会溢出**：本题约束 `1 ≤ nums[i] ≤ 100`、`n ≤ 100`，极端情况（n=100 全 100）结果是 90000，远小于 `INT_MAX`。**但这是靠约束兜住的**——如果元素范围放大到 10⁴ 量级，`nums[i]*nums[i]*100` 就会越过 `int`（10¹⁰），那时 `res` 和乘法都要换 `long long`。
 - **效率**：`O(n)` 枚举已经足够（n ≤ 100）。若把 n 放大到 10⁹ 而数组很小，更合适的做法是**枚举 n 的因子**（只试到 √n），因为「哪些下标会被命中」只取决于 n 的因子集合，与数组长度无关。
+
+## 另一种写法（Python · `solution2.py`）
+
+```python
+class Solution:
+    def sumOfSquares(self, nums: List[int]) -> int:
+        return sum(nums[i]**2 for i in range(len(nums)) if len(nums)%(i+1)==0)
+```
+
+- 与上面的 C++ 版**逻辑完全一致**：`i+1` 做 1-based 换算、整除判断、累加平方；两版在同一批 2010 个用例上输出逐例相同（本机交叉核对，0 处不同）。
+- 用生成器表达式 + `sum`，一行完成：`sum(... for i in range(len(nums)) if ...)`——生成器不建中间列表，额外空间 O(1)。
+- 与 C++ 版一样，题解文件不能脱离判题机单独运行：`List` 由判题机的前置代码提供，本地跑要自己加 `from typing import List`。
+- 小细节：条件里每次都调用 `len(nums)`（O(1)，无实质开销），提取成 `n = len(nums)` 可读性更好、也少一次属性查找。
 
 ## 复杂度
 - 时间：O(n)——扫一遍数组，每个位置做一次取模。

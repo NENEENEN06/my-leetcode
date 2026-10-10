@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 33 道题** · Easy 10 · Medium 20 · Hard 3
+**共 34 道题** · Easy 11 · Medium 20 · Hard 3
 
 ## 快速跳转
 
-**按难度**：[Easy 10](#easy--10-题) · [Medium 20](#medium--20-题) · [Hard 3](#hard--3-题)
+**按难度**：[Easy 11](#easy--11-题) · [Medium 20](#medium--20-题) · [Hard 3](#hard--3-题)
 
-**按算法**：[String 14](#string--14-题) · [Array 13](#array--13-题) · [Math 11](#math--11-题) · [Stack 8](#stack--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Hash Table 4](#hash-table--4-题) · [Matrix 3](#matrix--3-题) · [Binary Search 2](#binary-search--2-题) · [Geometry 2](#geometry--2-题) · [Greedy 2](#greedy--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Enumeration 1](#enumeration--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Simulation 1](#simulation--1-题) · [Sorting 1](#sorting--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 14](#array--14-题) · [String 14](#string--14-题) · [Math 11](#math--11-题) · [Stack 8](#stack--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Hash Table 4](#hash-table--4-题) · [Matrix 3](#matrix--3-题) · [Binary Search 2](#binary-search--2-题) · [Enumeration 2](#enumeration--2-题) · [Geometry 2](#geometry--2-题) · [Greedy 2](#greedy--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Bit Manipulation 1](#bit-manipulation--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Simulation 1](#simulation--1-题) · [Sorting 1](#sorting--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -40,6 +40,7 @@
 | [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) | Count Nodes Equal to Average of Subtree | Medium | Tree, Depth-First Search, Binary Tree |
 | [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) | Check if There Is a Valid Parentheses String Path | Hard | Array, Dynamic Programming, Matrix |
 | [2333](2333-minimum-sum-of-squared-difference/README.md) | Minimum Sum of Squared Difference | Medium | Array, Math, Sorting, Heap (Priority Queue), Binary Search |
+| [2778](2778-sum-of-squares-of-special-elements/README.md) | Sum of Squares of Special Elements | Easy | Array, Enumeration |
 | [3483](3483-unique-3-digit-even-numbers/README.md) | Unique 3-Digit Even Numbers | Easy | Enumeration, Array, Hash Table |
 | [3498](3498-reverse-degree-of-a-string/README.md) | Reverse Degree of a String | Easy | String, Simulation |
 | [3524](3524-find-x-value-of-array-i/README.md) | Find X Value of Array I | Medium | Array, Dynamic Programming, Math |
@@ -52,16 +53,17 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 
-共 33 道题。
+共 34 道题。
 
 ## 按难度
 
-### Easy · 10 题
+### Easy · 11 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · String, Stack
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Math, Geometry
 - [1021](1021-remove-outermost-parentheses/README.md) Remove Outermost Parentheses · String, Stack
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · String, Stack
+- [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Array, Enumeration
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Enumeration, Array, Hash Table
 - [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · String, Simulation
 - [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Array, Math
@@ -100,6 +102,23 @@
 
 ## 按算法
 
+### Array · 14 题
+
+- [0835](0835-image-overlap/README.md) Image Overlap · Medium
+- [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
+- [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
+- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
+- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+- [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
+- [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
+- [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
+- [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Easy
+- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
+- [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy
+- [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Medium
+- [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
+- [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
+
 ### String · 14 题
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
@@ -116,22 +135,6 @@
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · Easy
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
 - [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · Easy
-
-### Array · 13 题
-
-- [0835](0835-image-overlap/README.md) Image Overlap · Medium
-- [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
-- [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
-- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
-- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
-- [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
-- [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
-- [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Easy
-- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
-- [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy
-- [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Medium
-- [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
-- [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
 
 ### Math · 11 题
 
@@ -186,6 +189,11 @@
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
 
+### Enumeration · 2 题
+
+- [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
+- [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
+
 ### Geometry · 2 题
 
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
@@ -224,10 +232,6 @@
 ### Depth-First Search · 1 题
 
 - [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Medium
-
-### Enumeration · 1 题
-
-- [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
 
 ### Heap (Priority Queue) · 1 题
 

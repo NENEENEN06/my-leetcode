@@ -12,9 +12,9 @@
 
 ## 题目概览
 
-共 **35** 道题 · Easy 11 · Medium 20 · Hard 4
+共 **36** 道题 · Easy 11 · Medium 21 · Hard 4
 
-**算法分布**：Array 15 · String 14 · Math 11 · Stack 8 · Dynamic Programming 7 · Hash Table 5 · Greedy 3 · Matrix 3 · Binary Search 2 · Bit Manipulation 2 · Enumeration 2 · Geometry 2 等 26 个标签（全量见完整索引）
+**算法分布**：Array 16 · String 14 · Math 11 · Stack 8 · Dynamic Programming 7 · Hash Table 5 · Greedy 4 · Matrix 3 · Binary Search 2 · Bit Manipulation 2 · Enumeration 2 · Geometry 2 等 26 个标签（全量见完整索引）
 
 - 📖 **[完整索引](solutions/README.md)**：按题号 / 按难度 / 按算法三个视图，页首可锚点跳转
 - 🔍 **[筛选页](index.html)**：搜题号与标题，按难度、算法筛选（本地双击打开）

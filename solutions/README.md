@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 38 道题** · Easy 12 · Medium 22 · Hard 4
+**共 39 道题** · Easy 12 · Medium 23 · Hard 4
 
 ## 快速跳转
 
-**按难度**：[Easy 12](#easy--12-题) · [Medium 22](#medium--22-题) · [Hard 4](#hard--4-题)
+**按难度**：[Easy 12](#easy--12-题) · [Medium 23](#medium--23-题) · [Hard 4](#hard--4-题)
 
-**按算法**：[Array 17](#array--17-题) · [String 14](#string--14-题) · [Math 12](#math--12-题) · [Stack 8](#stack--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Hash Table 6](#hash-table--6-题) · [Greedy 5](#greedy--5-题) · [Matrix 3](#matrix--3-题) · [Binary Search 2](#binary-search--2-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Enumeration 2](#enumeration--2-题) · [Geometry 2](#geometry--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Sorting 2](#sorting--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 18](#array--18-题) · [String 14](#string--14-题) · [Math 12](#math--12-题) · [Stack 8](#stack--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Hash Table 7](#hash-table--7-题) · [Greedy 5](#greedy--5-题) · [Matrix 3](#matrix--3-题) · [Sorting 3](#sorting--3-题) · [Binary Search 2](#binary-search--2-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Enumeration 2](#enumeration--2-题) · [Geometry 2](#geometry--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Linked List 1](#linked-list--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -47,6 +47,7 @@
 | [3498](3498-reverse-degree-of-a-string/README.md) | Reverse Degree of a String | Easy | String, Simulation |
 | [3524](3524-find-x-value-of-array-i/README.md) | Find X Value of Array I | Medium | Array, Dynamic Programming, Math |
 | [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) | Smallest Index With Digit Sum Equal to Index | Easy | Array, Math |
+| [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) | Minimum Swaps to Sort by Digit Sum | Medium | Array, Hash Table, Sorting |
 | [3568](3568-minimum-moves-to-clean-the-classroom/README.md) | Minimum Moves to Clean the Classroom | Medium | BFS, Bit Manipulation, Array, Matrix |
 | [3723](3723-maximize-sum-of-squares-of-digits/README.md) | Maximize Sum of Squares of Digits | Medium | Math, Greedy |
 | [3727](3727-maximum-alternating-sum-of-squares/README.md) | Maximum Alternating Sum of Squares | Medium | Array, Greedy, Sorting |
@@ -57,7 +58,7 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 
-共 38 道题。
+共 39 道题。
 
 ## 按难度
 
@@ -76,7 +77,7 @@
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 
-### Medium · 22 题
+### Medium · 23 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -94,6 +95,7 @@
 - [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Tree, Depth-First Search, Binary Tree
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Array, Math, Sorting, Heap (Priority Queue), Binary Search
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Array, Dynamic Programming, Math
+- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Array, Hash Table, Sorting
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · BFS, Bit Manipulation, Array, Matrix
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Math, Greedy
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Array, Greedy, Sorting
@@ -110,7 +112,7 @@
 
 ## 按算法
 
-### Array · 17 题
+### Array · 18 题
 
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
@@ -123,6 +125,7 @@
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
 - [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Easy
+- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy
@@ -183,7 +186,7 @@
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
 
-### Hash Table · 6 题
+### Hash Table · 7 题
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
@@ -191,6 +194,7 @@
 - [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
 - [2913](2913-subarrays-distinct-element-sum-of-squares-i/README.md) Subarrays Distinct Element Sum of Squares I · Easy
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
+- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
 
 ### Greedy · 5 题
 
@@ -205,6 +209,12 @@
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
+
+### Sorting · 3 题
+
+- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
+- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 
 ### Binary Search · 2 题
 
@@ -230,11 +240,6 @@
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
-
-### Sorting · 2 题
-
-- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
-- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 
 ### Backtracking · 1 题
 

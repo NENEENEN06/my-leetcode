@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 41 道题** · Easy 12 · Medium 25 · Hard 4
+**共 42 道题** · Easy 12 · Medium 26 · Hard 4
 
 ## 快速跳转
 
-**按难度**：[Easy 12](#easy--12-题) · [Medium 25](#medium--25-题) · [Hard 4](#hard--4-题)
+**按难度**：[Easy 12](#easy--12-题) · [Medium 26](#medium--26-题) · [Hard 4](#hard--4-题)
 
-**按算法**：[Array 18](#array--18-题) · [String 15](#string--15-题) · [Math 12](#math--12-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Matrix 3](#matrix--3-题) · [Sorting 3](#sorting--3-题) · [Binary Search 2](#binary-search--2-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Enumeration 2](#enumeration--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
+**按算法**：[Array 18](#array--18-题) · [String 16](#string--16-题) · [Math 12](#math--12-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Enumeration 3](#enumeration--3-题) · [Matrix 3](#matrix--3-题) · [Sorting 3](#sorting--3-题) · [Binary Search 2](#binary-search--2-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -47,6 +47,7 @@
 | [3121](3121-count-the-number-of-special-characters-ii/README.md) | Count the Number of Special Characters II | Medium | Hash Table, String |
 | [3483](3483-unique-3-digit-even-numbers/README.md) | Unique 3-Digit Even Numbers | Easy | Enumeration, Array, Hash Table |
 | [3498](3498-reverse-degree-of-a-string/README.md) | Reverse Degree of a String | Easy | String, Simulation |
+| [3499](3499-maximize-active-section-with-trade-i/README.md) | Maximize Active Section with Trade I | Medium | String, Enumeration |
 | [3524](3524-find-x-value-of-array-i/README.md) | Find X Value of Array I | Medium | Array, Dynamic Programming, Math |
 | [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) | Smallest Index With Digit Sum Equal to Index | Easy | Array, Math |
 | [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) | Minimum Swaps to Sort by Digit Sum | Medium | Array, Hash Table, Sorting |
@@ -60,7 +61,7 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 
-共 41 道题。
+共 42 道题。
 
 ## 按难度
 
@@ -79,7 +80,7 @@
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 
-### Medium · 25 题
+### Medium · 26 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -98,6 +99,7 @@
 - [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Tree, Depth-First Search, Binary Tree
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Array, Math, Sorting, Heap (Priority Queue), Binary Search
 - [3121](3121-count-the-number-of-special-characters-ii/README.md) Count the Number of Special Characters II · Hash Table, String
+- [3499](3499-maximize-active-section-with-trade-i/README.md) Maximize Active Section with Trade I · String, Enumeration
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Array, Dynamic Programming, Math
 - [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Array, Hash Table, Sorting
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · BFS, Bit Manipulation, Array, Matrix
@@ -137,7 +139,7 @@
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
 
-### String · 15 题
+### String · 16 题
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · Easy
@@ -154,6 +156,7 @@
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
 - [3121](3121-count-the-number-of-special-characters-ii/README.md) Count the Number of Special Characters II · Medium
 - [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · Easy
+- [3499](3499-maximize-active-section-with-trade-i/README.md) Maximize Active Section with Trade I · Medium
 
 ### Math · 12 题
 
@@ -211,6 +214,12 @@
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 
+### Enumeration · 3 题
+
+- [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
+- [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
+- [3499](3499-maximize-active-section-with-trade-i/README.md) Maximize Active Section with Trade I · Medium
+
 ### Matrix · 3 题
 
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
@@ -232,11 +241,6 @@
 
 - [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
-
-### Enumeration · 2 题
-
-- [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
-- [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
 
 ### Geometry · 2 题
 

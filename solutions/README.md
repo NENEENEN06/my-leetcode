@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 42 道题** · Easy 12 · Medium 26 · Hard 4
+**共 43 道题** · Easy 13 · Medium 26 · Hard 4
 
 ## 快速跳转
 
-**按难度**：[Easy 12](#easy--12-题) · [Medium 26](#medium--26-题) · [Hard 4](#hard--4-题)
+**按难度**：[Easy 13](#easy--13-题) · [Medium 26](#medium--26-题) · [Hard 4](#hard--4-题)
 
-**按算法**：[Array 18](#array--18-题) · [String 16](#string--16-题) · [Math 12](#math--12-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Enumeration 3](#enumeration--3-题) · [Matrix 3](#matrix--3-题) · [Sorting 3](#sorting--3-题) · [Binary Search 2](#binary-search--2-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
+**按算法**：[Array 19](#array--19-题) · [String 16](#string--16-题) · [Math 12](#math--12-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Sorting 4](#sorting--4-题) · [Binary Search 3](#binary-search--3-题) · [Enumeration 3](#enumeration--3-题) · [Matrix 3](#matrix--3-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -37,6 +37,7 @@
 | [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) | Maximum Nesting Depth of the Parentheses | Easy | String, Stack |
 | [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) | Number of Sets of K Non-Overlapping Line Segments | Medium | Math, Dynamic Programming, Combinatorics |
 | [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) | Evaluate the Bracket Pairs of a String | Medium | Array, Hash Table, String |
+| [2089](2089-find-target-indices-after-sorting-array/README.md) | Find Target Indices After Sorting Array | Easy | Array, Binary Search, Sorting |
 | [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) | Maximum Twin Sum of a Linked List | Medium | Linked List, Two Pointers, Stack |
 | [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) | Count Nodes Equal to Average of Subtree | Medium | Tree, Depth-First Search, Binary Tree |
 | [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) | Check if There Is a Valid Parentheses String Path | Hard | Array, Dynamic Programming, Matrix |
@@ -61,16 +62,17 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 
-共 42 道题。
+共 43 道题。
 
 ## 按难度
 
-### Easy · 12 题
+### Easy · 13 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · String, Stack
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Math, Geometry
 - [1021](1021-remove-outermost-parentheses/README.md) Remove Outermost Parentheses · String, Stack
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · String, Stack
+- [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Array, Binary Search, Sorting
 - [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Array, Enumeration
 - [2913](2913-subarrays-distinct-element-sum-of-squares-i/README.md) Subarrays Distinct Element Sum of Squares I · Array, Hash Table, Binary Indexed Tree, Segment Tree
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Enumeration, Array, Hash Table
@@ -118,11 +120,12 @@
 
 ## 按算法
 
-### Array · 18 题
+### Array · 19 题
 
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
+- [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
 - [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
@@ -214,6 +217,19 @@
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 
+### Sorting · 4 题
+
+- [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
+- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
+- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
+
+### Binary Search · 3 题
+
+- [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
+- [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
+- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+
 ### Enumeration · 3 题
 
 - [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
@@ -225,17 +241,6 @@
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
-
-### Sorting · 3 题
-
-- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
-- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
-- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
-
-### Binary Search · 2 题
-
-- [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
-- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
 
 ### Bit Manipulation · 2 题
 

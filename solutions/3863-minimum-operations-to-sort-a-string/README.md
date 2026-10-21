@@ -32,7 +32,7 @@ public:
         int max_pos=n-1;
         for(int i=1;i<n;i++){
             if(flag&&s[i]<s[i-1]){
-                flag=false;;
+                flag=false;
             }
             min_pos=(s[i]<s[min_pos])?i:min_pos;
             max_pos=(s[n-1-i]>s[max_pos])?(n-1-i):max_pos;
@@ -54,7 +54,7 @@ public:
 ## 代码分析
 - 正确性：正确
 - 关键实现：一次遍历同时求出「是否已有序」「最小值位置」「最大值位置」，三个判断全部化成下标比较
-- 潜在 Bug：无。`flag=false;;` 那个多余分号不影响语义
+- 潜在 Bug：无
 - 可以改进的地方：`min_pos` / `max_pos` 的更新可以合成一个循环体，已经是了；可读性上把 `-1 / 0 / 1 / 3 / 2` 的判定顺序按答案大小排一下会更直观
 
 ## 复杂度

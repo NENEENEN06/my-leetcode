@@ -10,7 +10,7 @@ public:
         int max_pos=n-1;
         for(int i=1;i<n;i++){
             if(flag&&s[i]<s[i-1]){
-                flag=false;;
+                flag=false;
             }
             min_pos=(s[i]<s[min_pos])?i:min_pos;
             max_pos=(s[n-1-i]>s[max_pos])?(n-1-i):max_pos;

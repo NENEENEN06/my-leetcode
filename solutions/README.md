@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 45 道题** · Easy 13 · Medium 27 · Hard 5
+**共 46 道题** · Easy 13 · Medium 28 · Hard 5
 
 ## 快速跳转
 
-**按难度**：[Easy 13](#easy--13-题) · [Medium 27](#medium--27-题) · [Hard 5](#hard--5-题)
+**按难度**：[Easy 13](#easy--13-题) · [Medium 28](#medium--28-题) · [Hard 5](#hard--5-题)
 
-**按算法**：[Array 20](#array--20-题) · [String 17](#string--17-题) · [Math 13](#math--13-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Sorting 5](#sorting--5-题) · [Enumeration 4](#enumeration--4-题) · [Binary Search 3](#binary-search--3-题) · [Matrix 3](#matrix--3-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
+**按算法**：[Array 21](#array--21-题) · [String 17](#string--17-题) · [Math 13](#math--13-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Sorting 5](#sorting--5-题) · [Enumeration 4](#enumeration--4-题) · [Binary Search 3](#binary-search--3-题) · [Matrix 3](#matrix--3-题) · [Bit Manipulation 2](#bit-manipulation--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Depth-First Search 1](#depth-first-search--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -63,8 +63,9 @@
 | [3886](3886-sum-of-sortable-integers/README.md) | Sum of Sortable Integers | Hard | Array, Math, Sorting, Enumeration |
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
+| [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 
-共 45 道题。
+共 46 道题。
 
 ## 按难度
 
@@ -84,7 +85,7 @@
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 
-### Medium · 27 题
+### Medium · 28 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -113,6 +114,7 @@
 - [3871](3871-count-commas-in-range-ii/README.md) Count Commas in Range II · Math
 - [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Array, Math
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Array, Prefix/Suffix Preprocessing
+- [3942](3942-minimum-operations-to-sort-a-permutation/README.md) Minimum Operations to Sort a Permutation · Array
 
 ### Hard · 5 题
 
@@ -124,7 +126,7 @@
 
 ## 按算法
 
-### Array · 20 题
+### Array · 21 题
 
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
@@ -146,6 +148,7 @@
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
+- [3942](3942-minimum-operations-to-sort-a-permutation/README.md) Minimum Operations to Sort a Permutation · Medium
 
 ### String · 17 题
 

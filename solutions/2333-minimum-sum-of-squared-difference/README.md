@@ -17,46 +17,50 @@
 于是问题变成「把 $d$ 排序后从最高处开始削平，能削到哪一层」，用一个**前缀和**定位这一层，而不是逐单位模拟 $k$ 次：
 
 1. `d` 降序排序，末尾补一个哨兵 `0`（方便处理「全部都能削成 0」）。
-2. 从左往右累加前缀和 `cnt`，检查「把前 `pos+1` 个元素全部削到 `nums[pos+1]` 这一层」需要多少代价：`cnt - nums[pos+1]*(pos+1)`。代价 ≤ k 就说明能削得更低，`pos++` 继续；一旦代价 > k 就停在这层。
-3. 停下后，先把前 `pos+1` 个元素削到 `nums[pos]` 高度（这一步的代价确定能从 k 里扣掉），剩下的 `k` 再在**这 `pos+1` 个元素之间平均分配**：每个先降 `k/(pos+1)`，余数 `k%(pos+1)` 个元素再各降 1（除法保证不会降到比下一层还低）。
+2. 从左往右累加前缀和 `prefix`，检查「把前 `pos+1` 个元素全部削到 `diffs[pos+1]` 这一层」需要多少代价：`prefix - diffs[pos+1]*(pos+1)`。代价 ≤ budget 就说明能削得更低，`pos++` 继续；一旦代价 > budget 就停在这层。
+3. 停下后，先把前 `pos+1` 个元素削到 `diffs[pos]` 高度（这一步的代价确定能从 budget 里扣掉），剩下的 `budget` 再在**这 `pos+1` 个元素之间平均分配**：每个先降 `budget/(pos+1)`，余数 `budget%(pos+1)` 个元素再各降 1（除法保证不会降到比下一层还低）。
 4. 扫一遍算平方和；若 `pos == n` 说明所有差都能归零，直接返回 0。
 
 ## 代码
 
 ```cpp
+// 2333. Minimum Sum of Squared Difference
+// 全部 k1+k2 次减一都该花在差值最大的位置：排序后从上往下把元素削成一个平台。
 class Solution {
 public:
     long long minSumSquareDiff(vector<int>& nums1, vector<int>& nums2, int k1, int k2) {
-        long long res=0;
-        int n=nums1.size();
-        vector<long long>nums(n);
-        for(int i=0;i<n;i++){
-            nums[i]=abs(nums1[i]-nums2[i]);
+        long long res = 0;
+        int n = nums1.size();
+        vector<long long> diffs(n);
+        for (int i = 0; i < n; i++) {
+            diffs[i] = abs(nums1[i] - nums2[i]);
         }
-        long long k=k1+k2;
-        sort(nums.begin(),nums.end(),greater<long long>());
-        nums.push_back(0);
-        long long cnt=0;
-        int pos=0;
-        while(pos<n){
-            cnt+=nums[pos];
-            if(cnt-nums[pos+1]*(pos+1)>k){
-                k-=cnt-nums[pos]*(pos+1);
+        long long budget = k1 + k2;   // 总共可用的单点减一次数
+        sort(diffs.begin(), diffs.end(), greater<long long>());
+        diffs.push_back(0);   // 哨兵，保证下面访问 pos+1 不越界
+        long long prefix = 0;
+        int pos = 0;
+        while (pos < n) {
+            prefix += diffs[pos];
+            // 把前 pos+1 个一起削到 diffs[pos+1] 的代价是 prefix - diffs[pos+1]*(pos+1)
+            if (prefix - diffs[pos + 1] * (pos + 1) > budget) {
+                budget -= prefix - diffs[pos] * (pos + 1);
                 break;
             }
             pos++;
         }
-        if(pos==n){
-            return 0;
+        if (pos == n) {
+            return 0;   // 全部能削到 0，平方和自然为 0
         }
-        for(int i=0;i<n;i++){
-            if(i<=pos){
-                nums[i]=nums[pos]-k/(pos+1);
-                if(i<k%(pos+1)){
-                    nums[i]--;
+        for (int i = 0; i < n; i++) {
+            if (i <= pos) {
+                // 前 pos+1 个平摊剩余次数：先降到同一高度，余数再给最前面几个各多减 1
+                diffs[i] = diffs[pos] - budget / (pos + 1);
+                if (i < budget % (pos + 1)) {
+                    diffs[i]--;
                 }
             }
-            res+=nums[i]*nums[i];
+            res += diffs[i] * diffs[i];
         }
         return res;
     }
@@ -65,12 +69,12 @@ public:
 
 ## 代码分析
 - **正确性：经三重验证全部通过**（见文末「验证方法」）——小规模与**穷举出来的真实最优**一致（4000 组），中/大规模与堆模拟、按层统计两种独立写法一致（含 n=10⁵、k=10⁹ 的极限用例），官方三例全对（579 / 43 / 0）。
-- **哨兵 `nums.push_back(0)` 是这版最巧妙的一笔**：它让「全部削成 0」这种情况自然落到 `pos == n` 分支，不需要在循环里单独判边界。同时它也保证 `nums[pos+1]` 永远可读，不会越界。
-- **前缀和代替逐单位模拟**：`k` 可以到 2×10⁹，逐次削一个单位必然超时；这里用 `cnt - nums[pos+1]*(pos+1)` 一次算出「整层削平」的代价，只有整数运算，O(n log n) 全靠排序。
-- **余数分配写法标准**：`k/(pos+1)` 是平均降幅（整数除法天然向下取整，保证不会越过 `nums[pos+1]`），`i < k%(pos+1)` 让余数落到前几个元素上，避免全压在同一个元素上。
+- **哨兵 `diffs.push_back(0)` 是这版最巧妙的一笔**：它让「全部削成 0」这种情况自然落到 `pos == n` 分支，不需要在循环里单独判边界。同时它也保证 `diffs[pos+1]` 永远可读，不会越界。
+- **前缀和代替逐单位模拟**：`k` 可以到 2×10⁹，逐次削一个单位必然超时；这里用 `prefix - diffs[pos+1]*(pos+1)` 一次算出「整层削平」的代价，只有整数运算，O(n log n) 全靠排序。
+- **余数分配写法标准**：`budget/(pos+1)` 是平均降幅（整数除法天然向下取整，保证不会越过 `diffs[pos+1]`），`i < budget%(pos+1)` 让余数落到前几个元素上，避免全压在同一个元素上。
 - **可以更好的地方（都不影响正确性）**：
-  - 变量名 `cnt`、`pos` 语义偏弱，`cnt` 其实是「前 pos+1 个元素之和」，`pos` 是「削平的层下标」，改成 `prefixSum`、`level` 更好读；
-  - 复用 `nums` 数组原地改写（原始差 → 最终值），读代码时容易搞混「此刻的 nums 是差还是结果」，拆两个数组或加注释更稳；
+  - `prefix`（前 pos+1 个元素之和）与 `pos`（削平的层下标）两个名字仍偏弱，写成 `prefixSum`、`level` 更好读；
+  - 复用 `diffs` 数组原地改写（原始差 → 最终值），读代码时容易搞混「此刻的 diffs 是差还是结果」，拆两个数组或加注释更稳；
   - `abs(nums1[i]-nums2[i])` 依赖 `nums1/nums2` 的元素在 int 范围内（本题满足），若数据范围变大，两个 int 相减要先转 `long long`。
 
 ## 复杂度
@@ -81,7 +85,7 @@ public:
 - **前缀和必须用 64 位**：n 和 d 都到 10⁵ 时，前缀和最大 10¹⁰，`int` 直接溢出（本题官方数据就会触发）。
 - **`k1 + k2` 用 int 相加刚好安全**：`2×10⁹ < 2147483647`（`INT_MAX` ≈ 2.147×10⁹），能过；但这是「刚好」，一旦题目把 k 放大就会溢出——写成 `(long long)k1 + k2` 更稳妥。
 - **不要逐单位模拟**：k 最大 2×10⁹，每次找一个最大值来削，必然超时；要么排序 + 前缀和定位层（本解），要么按层统计。
-- **余数要分散到不同元素**：`k/(pos+1)` 个给所有人，剩下 `k%(pos+1)` 个**一人一个**地再减 1，不能都堆在同一个元素上（堆在一起会让平方和更大）。
+- **余数要分散到不同元素**：`budget/(pos+1)` 个给所有人，剩下 `budget%(pos+1)` 个**一人一个**地再减 1，不能都堆在同一个元素上（堆在一起会让平方和更大）。
 - **排序方向**：这里要削最大的差，必须**降序**排序；升序排就把最小的差削掉了，结果会偏大。
 - **别忘了合并 k1、k2**：把两个操作数当独立约束分开处理会漏解——对 `d` 而言它们完全等价，合并后才是「总共能削多少」。
 - **边界**：`n = 1`、`k = 0`、所有差都是 0、`k` 足够把所有差削平（返回 0）——这些都要能跑过，本版靠哨兵 + `pos==n` 分支覆盖。

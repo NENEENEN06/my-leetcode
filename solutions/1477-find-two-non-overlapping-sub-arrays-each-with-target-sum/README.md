@@ -10,11 +10,11 @@
 ## 我的思路
 一趟滑动窗口扫出所有「和为 target」的窗口，同时用一个前缀最小值表记录「当前位置之前出现过的最短 target 子数组长度」，这样每个窗口都能 O(1) 地配上一个位于它左侧的最优伙伴。
 
-- `cnt`：当前窗口 `arr[left..right]` 的元素和；`left/right` 是滑动窗口的左右指针。
-- 窗口维护：`right` 每轮右移吞进一个数；当 `cnt > target` 时不断 `cnt -= arr[left++]` 把左端收缩回来。因为数组元素全是正数，收缩一定能让 `cnt` 单调下降，窗口不会漏解。
+- `windowSum`：当前窗口 `arr[left..right]` 的元素和；`left/right` 是滑动窗口的左右指针。
+- 窗口维护：`right` 每轮右移吞进一个数；当 `windowSum > target` 时不断 `windowSum -= arr[left++]` 把左端收缩回来。因为数组元素全是正数，收缩一定能让 `windowSum` 单调下降，窗口不会漏解。
 - `dp[i]`：在 `arr[0..i-1]` 里，和为 target 的**最短**子数组长度；找不到就是哨兵值 `100001`（比任何合法长度 1e5 都大）。
 - `dp[right+1] = dp[right]`：先把「不含当前元素的最优值」继承下来，保证 `dp` 是前缀最小值、单调不增。
-- 命中窗口时（`cnt == target`）：
+- 命中窗口时（`windowSum == target`）：
   - 配对：`ans = min(ans, dp[left] + (right-left+1))`。`dp[left]` 描述的是 `arr[0..left-1]`，与当前窗口 `arr[left..right]` 天然不重叠，长度直接相加即可。
   - 更新：`dp[right+1] = min(dp[right], right-left+1)`，把当前这个更短的候选纳入前缀最优。
 - `right` 最后右移一格推进循环；结束返回 `ans`，若从未凑出两个窗口（仍是哨兵）就返回 -1。
@@ -23,34 +23,41 @@
 
 ## 代码
 ```cpp
+// 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
+// 滑动窗口找出所有和为 target 的区间；dp[i] 记前 i 个元素中最短合法区间的长度，
+// 每遇到新合法区间就用「它 + 它左侧最短的那个」更新答案。
 class Solution {
 public:
     int minSumOfLengths(vector<int>& arr, int target) {
-        int left=0,right=0;
-        int n=arr.size();
-        int cnt =0;
-        vector<int>dp(n+1,100001);
-        int ans=100001;
-        while(right<n){
-            cnt+=arr[right];
-            while(cnt>target){
-                cnt-=arr[left];
+        int left = 0, right = 0;
+        int n = arr.size();
+        int windowSum = 0;
+        // dp[i]：arr[0..i-1] 中和为 target 的最短区间长度，100001 表示不存在
+        vector<int> dp(n + 1, 100001);
+        int ans = 100001;
+        while (right < n) {
+            windowSum += arr[right];
+            // 超出 target 就从左边缩，缩到刚好不超过为止
+            while (windowSum > target) {
+                windowSum -= arr[left];
                 left++;
             }
-            dp[right+1]=dp[right];
-            if(cnt==target){
-                ans=min(ans,dp[left]+right-left+1);
-                dp[right+1]=min(dp[right],right-left+1);
+            dp[right + 1] = dp[right];
+            if (windowSum == target) {
+                // 先用还没包含自身的 dp 更新答案，才能保证两个区间不重叠
+                ans = min(ans, dp[left] + right - left + 1);
+                // 再用当前区间长度更新前缀最短值
+                dp[right + 1] = min(dp[right], right - left + 1);
             }
             right++;
         }
-        return (ans==100001)?-1:ans;
-        }
+        return (ans == 100001) ? -1 : ans;
+    }
 };
 ```
 
 ## 代码分析
-- 正确性：正确。随机小数据对拍 20000 组与暴力枚举完全一致（n ≤ 12、元素 1..5），n=1e5 全为 1 且 target=1 的规模测试给出 2，符合预期。滑动窗口依赖「元素全为正」这一题设，窗口收缩后不会遗漏 `cnt == target` 的位置；`dp[left]` 恰好在当前窗口左端点之前取最优，天然满足不重叠；两个长度都不超过 1e5，哨兵 100001 相加也不会溢出 int。
+- 正确性：正确。随机小数据对拍 20000 组与暴力枚举完全一致（n ≤ 12、元素 1..5），n=1e5 全为 1 且 target=1 的规模测试给出 2，符合预期。滑动窗口依赖「元素全为正」这一题设，窗口收缩后不会遗漏 `windowSum == target` 的位置；`dp[left]` 恰好在当前窗口左端点之前取最优，天然满足不重叠；两个长度都不超过 1e5，哨兵 100001 相加也不会溢出 int。
 - 关键实现：`dp[right+1] = dp[right]` 这行是精髓 —— 它让前缀最小值在「当前右端点不构成 target 窗口」时也能向后传递，否则命中窗口时就只能用「恰好以 left 结尾」的最优值，会漏掉更早的更短窗口。
 - 潜在 Bug：无。`ans` 与 `dp` 共用同一哨兵值，返回前的 `ans==100001` 判断能正确区分「没找到」与「合法答案」。
 - 可以改进的地方：仅可读性 —— 最后一行的 `}` 缩进多了一格；变量可命名得更有语义（如 `best`、`minLen`、`sum`）；若想省掉哨兵与返回值判断，可用 `long long` 或 `INT_MAX/2` 初始化。算法上也可以走「前缀和 + 哈希表 + 前缀最小长度」的等价写法，但本解法已经是一趟 O(n)。
@@ -63,7 +70,7 @@ public:
 - **`dp[right+1] = dp[right]` 写漏或写反**：漏掉它，前缀最小值就无法跨位置传递，答案会偏大甚至误判为 -1。
 - **配对时用错下标**：`dp[left]` 才是「完全在当前窗口左侧」的最优值；写成 `dp[right]` 会把包含当前元素的位置算进来，可能重叠。
 - **哨兵值取得不够大**：哨兵必须严格大于任何合法长度（长度上界是 n ≤ 1e5），取 100001 安全；取 100000 会把「长度为 100000 的合法答案」和「不存在」混淆。
-- **数组含 0 或负数时仍套用该滑动窗口**：本题题设是正整数（`1 <= arr[i] <= 1000`），收缩左端才能保证 `cnt` 单调下降。若元素可能为 0 或负数，这套滑动窗口会失效，需要改用前缀和 + 哈希表。
+- **数组含 0 或负数时仍套用该滑动窗口**：本题题设是正整数（`1 <= arr[i] <= 1000`），收缩左端才能保证 `windowSum` 单调下降。若元素可能为 0 或负数，这套滑动窗口会失效，需要改用前缀和 + 哈希表。
 - **返回 -1 的条件**：只有当两个子数组都凑齐时才有答案；只找到一个窗口时必须返回 -1，不能返回那个窗口长度。
 
 ## 总结

@@ -12,46 +12,51 @@
 ## 我的思路
 
 - 核心思想：模拟竖式加法。逆序存储使得链表头正好是个位，从头到尾逐位相加就是自然地从低位加到高位。
-- 使用的数据结构：新建一条结果链表，用 `head`、`tail` 两个指针维护；进位用 `flag` 保存。
+- 使用的数据结构：新建一条结果链表，用 `head`、`tail` 两个指针维护；进位用 `carry` 保存。
 - 算法流程：
-  1. 初始化 `head = NULL`、`tail = NULL`、进位 `flag = 0`。
-  2. 只要 `l1`、`l2` 还有节点，或者进位 `flag` 还没清零，就继续循环。
-  3. 每一轮取出当前位的值：链表为空则按 0 处理（`val1`、`val2`），计算 `sum = val1 + val2 + flag`。
-  4. 更新进位 `flag = sum / 10`，本位的数字取 `sum % 10`。
+  1. 初始化 `head = NULL`、`tail = NULL`、进位 `carry = 0`。
+  2. 只要 `l1`、`l2` 还有节点，或者进位 `carry` 还没清零，就继续循环。
+  3. 每一轮取出当前位的值：链表为空则按 0 处理（`val1`、`val2`），计算 `sum = val1 + val2 + carry`。
+  4. 更新进位 `carry = sum / 10`，本位的数字取 `sum % 10`。
   5. 新建节点保存本位数字，接到结果链表尾部；`l1`、`l2` 非空时各自后移一位。
   6. 循环结束后返回 `head`。
 - 为什么这样做：竖式加法只需要“逐位求和 + 记录进位”这一条规则，链表逆序恰好省去了翻转，直接从头走到尾即可。
-- 关键状态 / 变量：`head`（结果链表头，最后返回）、`tail`（当前末尾，用于接新节点）、`flag`（进位，0 或 1）。
+- 关键状态 / 变量：`head`（结果链表头，最后返回）、`tail`（当前末尾，用于接新节点）、`carry`（进位，0 或 1）。
 - 为什么能够得到正确答案：循环条件把三种情况都覆盖了——`l1` 有剩余、`l2` 有剩余、进位未清零；较短的链表走完后空位按 0 相加，最后一次迭代若仍有进位会额外生成最高位节点（如 999 + 1 = 1000）。
 
 ## 代码
 
 ```c
+// 0002. Add Two Numbers
+// 竖式加法：两条链表同位相加并带上进位，哪条链先走完就用 0 顶替它的位。
+// 链表头靠三元表达式直接挂到 head 上，省掉哑结点。
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
-struct ListNode* head=NULL,*tail=NULL,*pNew;
-int flag=0;
-while(l1!=NULL||l2!=NULL||flag){
-int val1=(l1==NULL)?0:l1->val;
-int val2=(l2==NULL)?0:l2->val;
-int sum=val1+val2+flag;
-flag=sum/10;
-sum%=10;
-pNew=(struct ListNode*)malloc(sizeof(struct ListNode));
-pNew->val=sum;
-pNew->next=NULL;
-(head==NULL)?(head=pNew):(tail->next=pNew);
-tail=pNew;
-if(l1!=NULL) l1=l1->next;
-if(l2!=NULL) l2=l2->next;
-}
-return head;
+    struct ListNode *head = NULL, *tail = NULL, *newNode;
+    int carry = 0;
+    // 两条链都走完、进位也清零，循环才停
+    while (l1 != NULL || l2 != NULL || carry) {
+        int val1 = (l1 == NULL) ? 0 : l1->val;
+        int val2 = (l2 == NULL) ? 0 : l2->val;
+        int sum = val1 + val2 + carry;
+        carry = sum / 10;
+        sum %= 10;
+        newNode = (struct ListNode*)malloc(sizeof(struct ListNode));
+        newNode->val = sum;
+        newNode->next = NULL;
+        // 头结点还没建时挂 head，否则接在 tail 后面（此时 tail 必定非空）
+        (head == NULL) ? (head = newNode) : (tail->next = newNode);
+        tail = newNode;
+        if (l1 != NULL) l1 = l1->next;
+        if (l2 != NULL) l2 = l2->next;
+    }
+    return head;
 }
 ```
 
 ## 代码分析
 
 - 正确性：正确。
-- 关键实现：循环条件 `l1 != NULL || l2 != NULL || flag` 是整段代码的要点——两链表都走完后若还有进位，循环会再多执行一轮，把最高位的进位节点建出来。`(head == NULL) ? (head = pNew) : (tail->next = pNew)` 用一次判断区分“结果链表为空（当前是第一个节点）”和“已有节点需要接到末尾”两种情况，之后统一更新 `tail`。
+- 关键实现：循环条件 `l1 != NULL || l2 != NULL || carry` 是整段代码的要点——两链表都走完后若还有进位，循环会再多执行一轮，把最高位的进位节点建出来。`(head == NULL) ? (head = newNode) : (tail->next = newNode)` 用一次判断区分“结果链表为空（当前是第一个节点）”和“已有节点需要接到末尾”两种情况，之后统一更新 `tail`。
 - 潜在 Bug：无逻辑错误。把带副作用的赋值写进三元表达式并当作语句使用，返回值会被丢弃，属于风格问题（部分编译器可能因此给出警告），但语义是正确的。
 - 可以改进的地方：把三元表达式改成 `if/else` 可读性更好；也可以先建一个哨兵（dummy）头节点来消除首节点特判；`malloc` 后已正确设置 `next = NULL`，LeetCode 判题环境不需要手动释放这些新节点。
 
@@ -63,7 +68,7 @@ return head;
 ## 易错点
 
 - 两个链表长度不同：短的链表走完后要按 0 处理，而不是直接结束循环。
-- 最后的进位：例如 999 + 1，两个链表都读完时进位还是 1，循环条件里漏掉 `flag` 就会丢掉最高位。
+- 最后的进位：例如 999 + 1，两个链表都读完时进位还是 1，循环条件里漏掉 `carry` 就会丢掉最高位。
 - 首节点处理：第一个节点创建时 `head` 还是 NULL，必须先接到 `head` 上，否则返回的链表会丢失节点。
 - 每个新节点都要把 `next` 置为 NULL，避免结果链表尾部指针悬空。
 - 指针后移要加非空判断，防止 `l1` 或 `l2` 先走完后对空指针取 `->next`。

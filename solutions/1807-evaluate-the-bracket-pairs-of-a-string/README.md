@@ -10,44 +10,45 @@
 ## 我的思路
 先把键值对灌进哈希表，然后对 `s` 做一次线性扫描：遇到 `(` 就一路读到 `)` 收集出键，查表得值或 `?`；不是括号内的字符直接照抄。
 
-- 建表：`mp[row[0]] = row[1]`，`unordered_map` 让每次查询平均 O(格式的键长)。
-- 扫描：外层 `i` 走遍字符串；见 `(` 就把 `i` 前移一位，内层循环 `for(; s[i] != ')'; i++)` 逐字符拼出键名 `tmp`。
-- 查表：`mp.find(tmp)` 命中就把值追加到结果，未命中追加 `'?'`。
+- 建表：`table[row[0]] = row[1]`，`unordered_map` 让每次查询平均 O(格式的键长)。
+- 扫描：外层 `i` 走遍字符串；见 `(` 就把 `i` 前移一位，内层循环 `for(; s[i] != ')'; i++)` 逐字符拼出键名 `key`。
+- 查表：`table.find(key)` 命中就把值追加到结果，未命中追加 `'?'`。
 - 内层循环结束时 `i` 正停在 `)` 上，外层 `for` 的 `i++` 恰好跳过它，所以括号不会被写进结果。
 
 为什么正确：题目保证括号不嵌套、键非空且不含 `)`，因此「从 `(` 之后读到第一个 `)`」就是完整的键名，不会有歧义；其余字符按位复制即可保持顺序。
 
 ## 代码
 ```cpp
+// 1807. Evaluate the Bracket Pairs of a String
+// 括号内的字符串去映射表里查，查到换成 value，查不到换成 '?'；括号外的字符原样输出。
 class Solution {
 public:
     string evaluate(string s, vector<vector<string>>& knowledge) {
-            unordered_map<string,string>mp;
-            string res;
-            for(auto &row : knowledge){
-                mp[row[0]]=row[1];
-            }
-            int len=s.size();
-            for(int i=0;i<len;i++){
-                if(s[i]=='('){
-                    i++;
-                    string tmp;
-                    for(;s[i]!=')';i++){
-                        tmp+=s[i];
-                    }
-                    auto it=mp.find(tmp);
-                    if(it!=mp.end()){
-                        res+=it->second;
-                    }
-                    else{
-                        res+='?';
-                    }
+        unordered_map<string, string> table;   // key -> value
+        string res;
+        for (auto& row : knowledge) {
+            table[row[0]] = row[1];
+        }
+        int len = s.size();
+        for (int i = 0; i < len; i++) {
+            if (s[i] == '(') {
+                // 先跳过 '('，再一路读到 ')' 之前，中间这段就是 key
+                i++;
+                string key;
+                for (; s[i] != ')'; i++) {
+                    key += s[i];
                 }
-                else{
-                    res+=s[i];
+                auto it = table.find(key);
+                if (it != table.end()) {
+                    res += it->second;
+                } else {
+                    res += '?';
                 }
+            } else {
+                res += s[i];
             }
-            return res;
+        }
+        return res;
     }
 };
 ```
@@ -57,7 +58,7 @@ public:
 - 关键实现：内层循环把 `i` 推到 `)` 上、由外层自增越过它，这个「指针交接」是本题最容易写错的地方；用 `unordered_map` 建表把每次查询降到平均 O(1)。
 - 潜在 Bug：无（在题目给定的规范输入下）。若输入不保证「括号成对」，`for(; s[i] != ')'; i++)` 会越界读，需自行加边界保护。
 - 可以改进的地方：
-  1. **用 `find` + `substr` 代替逐字符拼接**：`size_t r = s.find(')', i); string tmp = s.substr(i, r - i); i = r;` —— 少一次循环，语义更清楚，也避免 `tmp += c` 的多次扩容。
+  1. **用 `find` + `substr` 代替逐字符拼接**：`size_t r = s.find(')', i); string key = s.substr(i, r - i); i = r;` —— 少一次循环，语义更清楚，也避免 `key += c` 的多次扩容。
   2. `res.reserve(s.size())` 预留容量（结果长度通常与 `s` 同量级），减少重新分配。
   3. 代码整体缩进多了 4 个空格（多了一层无效缩进），格式化一下更好读。
 

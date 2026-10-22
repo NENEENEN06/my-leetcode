@@ -10,33 +10,35 @@
 ## 我的思路
 经典栈匹配：遇到左括号入栈，遇到右括号就看栈顶是不是它对应的左括号。
 
-- 用 `map<char,char>` 存「右括号 → 左括号」的对应关系（`')'→'('`、`'}'→'{'`、`']'→'['`）。因为表里只有右括号，所以 `mp.find(ch)==mp.end()` 恰好可以直接判断「当前字符是左括号」。
+- 用 `map<char,char>` 存「右括号 → 左括号」的对应关系（`')'→'('`、`'}'→'{'`、`']'→'['`）。因为表里只有右括号，所以 `matchOf.find(ch)==matchOf.end()` 恰好可以直接判断「当前字符是左括号」。
 - 左括号：`st.push(ch)`。
 - 右括号：若栈空（没有可配对的左括号）或栈顶不是对应左括号 → 直接 `return false`；否则 `st.pop()` 消掉这一对。
 - 扫完后返回 `st.empty()` —— 栈里还有左括号说明有没闭合的，同样无效。
 
-关键点：`st.empty() || st.top()!=mp[ch]` 里 `empty()` 必须写在前面，靠短路求值避免对空栈调用 `top()`（未定义行为）。
+关键点：`st.empty() || st.top()!=matchOf[ch]` 里 `empty()` 必须写在前面，靠短路求值避免对空栈调用 `top()`（未定义行为）。
 
 ## 代码
 ```cpp
+// 20. Valid Parentheses
+// 用栈做括号匹配：左括号入栈，右括号必须与栈顶配对，扫完栈必须为空。
 class Solution {
 public:
     bool isValid(string s) {
-        stack<char>st;
-        map<char,char>mp={
-            {')','('},
-            {'}','{'},
-            {']','['}
+        stack<char> st;
+        // 只登记「右括号 -> 左括号」的映射，靠 find 判断当前字符是不是右括号
+        map<char, char> matchOf = {
+            {')', '('},
+            {'}', '{'},
+            {']', '['}
         };
-        for(auto ch:s){
-            if(mp.find(ch)==mp.end()){
+        for (auto ch : s) {
+            if (matchOf.find(ch) == matchOf.end()) {
                 st.push(ch);
-            }
-            else{
-                if(st.empty()||st.top()!=mp[ch]){
+            } else {
+                // 栈空说明右括号多了一个；栈顶不配说明嵌套顺序错了
+                if (st.empty() || st.top() != matchOf[ch]) {
                     return false;
-                }
-                else{
+                } else {
                     st.pop();
                 }
             }
@@ -53,7 +55,7 @@ public:
 - 可以改进的地方：
   1. **`map` 换成 `switch` 或 `unordered_map`**：只有 3 条映射，`std::map`（红黑树）在这里纯属过度设计；`switch(ch){case ')': ...}` 或 `unordered_map` 常数更小。
   2. **奇偶早退**：有效括号串长度必为偶数，开头加 `if(s.size()%2) return false;` 能省掉一半无解串的扫描。
-  3. `for(auto ch : s)` 可写 `for(char ch : s)`；`mp[ch]` 在 `find` 已命中的分支里是安全的，但用 `mp.at(ch)` 或迭代器更严谨（避免误写成插入语义）。
+  3. `for(auto ch : s)` 可写 `for(char ch : s)`；`matchOf[ch]` 在 `find` 已命中的分支里是安全的，但用 `matchOf.at(ch)` 或迭代器更严谨（避免误写成插入语义）。
   4. 也可以完全不建表：直接 `if(ch=='('||ch=='['||ch=='{') push; else { 用 switch 判断配对 }`，省掉哈希/树的查找开销。
 
 ## 另一种写法（同一题的第二个版本）
@@ -101,7 +103,7 @@ public:
 - 空间复杂度：O(n)。最坏情况（全是左括号）栈深为 n，配套的 `map` 是常数空间。
 
 ## 易错点
-- **栈空时先调 `top()`**：写成 `st.top()!=mp[ch] || st.empty()` 就是未定义行为，可能崩也可能给出随机结果；顺序必须是「先判空」。
+- **栈空时先调 `top()`**：写成 `st.top()!=matchOf[ch] || st.empty()` 就是未定义行为，可能崩也可能给出随机结果；顺序必须是「先判空」。
 - **只判配对、忘记最终清空**：不写 `return st.empty()` 而写 `return true`，会让 `"(("`、`"((()"` 这类「多出左括号」的串误判为有效。
 - **错配类型没查**：只判断「栈非空就 pop」，会把 `"([)]"` 判成 true（正确结果应是 false，因为交叉嵌套）。
 - **把右括号写成入栈**：搞混方向会让逻辑整体反过来。

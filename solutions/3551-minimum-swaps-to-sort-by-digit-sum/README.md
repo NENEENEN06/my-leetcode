@@ -8,7 +8,7 @@
 给定一个由互不相同的正整数组成的数组 `nums`，按每个数的数位和升序排序；数位和相同的按数值本身升序。返回把数组排成这个顺序所需的最小交换次数。一次交换指交换数组中两个不同位置的值。
 
 ## 我的思路
-先把每个数展开成 `(数值, 数位和)` 二元组，按「数位和优先、数值其次」排序，得到目标序列 `ordered_nums`；同时用哈希表 `pos` 记录每个值当前所在下标。
+先把每个数展开成 `(数值, 数位和)` 二元组，按「数位和优先、数值其次」排序，得到目标序列 `orderedNums`；同时用哈希表 `pos` 记录每个值当前所在下标。
 
 然后从左到右扫一遍原数组：如果 `nums[i]` 已经等于目标值就跳过；否则把 `nums[i]` 挪到「目标值当前所在的位置」上——这等价于做了一次交换，只计一次数。本质就是置换环：每个长度为 k 的环最少需要 k-1 次交换，而这个写法对每个环恰好计数 k-1 次。
 
@@ -16,32 +16,38 @@
 
 ## 代码
 ```cpp
+// 3551. Minimum Swaps to Sort by Digit Sum
+// 目标排列唯一：先按数位和升序、再按数值升序。把当前位置的数和目标位置的数直接互换，
+// 每次交换至少让一个数归位，总次数就是最少交换数。
 class Solution {
 public:
-    int digitSum(int num){
-        int res=0;
-        while(num){
-            res+=num%10;
-            num/=10;
+    int digitSum(int num) {
+        int res = 0;
+        while (num) {
+            res += num % 10;
+            num /= 10;
         }
         return res;
     }
     int minSwaps(vector<int>& nums) {
-        vector<pair<int,int>>ordered_nums;
-        unordered_map<int,int>pos;
-        int n=nums.size();
-        int res=0;
-        for(int i=0;i<n;i++){
-            ordered_nums.push_back({nums[i],digitSum(nums[i])});
-            pos[nums[i]]=i;
+        vector<pair<int, int>> orderedNums;
+        unordered_map<int, int> pos;
+        int n = nums.size();
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            orderedNums.push_back({nums[i], digitSum(nums[i])});
+            pos[nums[i]] = i;
         }
-        sort(ordered_nums.begin(),ordered_nums.end(),[](auto a,auto b){
-            return a.second!=b.second?a.second<b.second:a.first<b.first;
+        sort(orderedNums.begin(), orderedNums.end(), [](auto a, auto b) {
+            return a.second != b.second ? a.second < b.second : a.first < b.first;
         });
-        for(int i=0;i<n;i++){
-            if(nums[i]==ordered_nums[i].first){continue;}
-            pos[nums[i]]=pos[ordered_nums[i].first];
-            nums[pos[ordered_nums[i].first]]=nums[i];
+        for (int i = 0; i < n; i++) {
+            // 已经在目标位置上的数不用动
+            if (nums[i] == orderedNums[i].first) {
+                continue;
+            }
+            pos[nums[i]] = pos[orderedNums[i].first];
+            nums[pos[orderedNums[i].first]] = nums[i];
             res++;
         }
         return res;
@@ -58,12 +64,12 @@ public:
 
 ## 复杂度
 - 时间复杂度：O(n log n + n log C)。排序 O(n log n)，数位和每项 O(log nums[i])，总体 log 项远小于 n log n。
-- 空间复杂度：O(n)。`ordered_nums` 与 `pos` 各 O(n)。
+- 空间复杂度：O(n)。`orderedNums` 与 `pos` 各 O(n)。
 
 ## 易错点
 - 排序必须是双关键字 `(数位和, 数值)`，只按数位和会把同和元素排错（例 3 的 43 与 34 就卡在这里）。
 - 最小交换次数不是「错位元素个数」：一个 2 元环有 2 个元素错位，但只需 1 次交换；正确口径是 sum(环长 − 1) = n − 环数。
-- `nums[i]` 与 `ordered_nums[i].first` 比较的是**值**，不是数位和——写错就退化成「数位和是否归位」。
+- `nums[i]` 与 `orderedNums[i].first` 比较的是**值**，不是数位和——写错就退化成「数位和是否归位」。
 - 就地修改输入后不要再次使用 `nums`。
 
 ## 总结

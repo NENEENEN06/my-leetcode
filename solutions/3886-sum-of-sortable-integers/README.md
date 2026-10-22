@@ -19,57 +19,62 @@
 ## 我的思路
 
 - 核心思想：**每个子数组只能整体循环移位，所以每个块内的多重集不变，块内的元素顺序必须是「排序后该块」的某个循环移位**。于是把所有可能整除 `n` 的 `k` 枚举出来，逐块验证这个条件即可。
-- 使用的数据结构：`ordered_nums`（整体排好序的副本）、`k_set`（`unordered_set` 存 `n` 的全部因数，用试除法一趟拿齐，顺便去重）。
+- 使用的数据结构：`orderedNums`（整体排好序的副本）、`kSet`（`unordered_set` 存 `n` 的全部因数，用试除法一趟拿齐，顺便去重）。
 - 算法流程：
-  1. 复制一份 `nums` 排序得到 `ordered_nums`——它就是目标排序结果的「每一块应该长什么样」。
-  2. 试除 `i` 从 1 到 √n，能整除就把 `i` 和 `n/i` 都塞进 `k_set`。
-  3. 对每个 `k`：按 `k` 切块，每块枚举偏移量 `off`（0..k-1），逐位比较 `nums[left+pos]` 与 `ordered_nums[left+(pos+off)%k]`；只要有一个 `off` 整块都对上，该块合格。
+  1. 复制一份 `nums` 排序得到 `orderedNums`——它就是目标排序结果的「每一块应该长什么样」。
+  2. 试除 `i` 从 1 到 √n，能整除就把 `i` 和 `n/i` 都塞进 `kSet`。
+  3. 对每个 `k`：按 `k` 切块，每块枚举偏移量 `off`（0..k-1），逐位比较 `nums[left+pos]` 与 `orderedNums[left+(pos+off)%k]`；只要有一个 `off` 整块都对上，该块合格。
   4. 所有块都合格才把 `k` 累加进答案；任一块不合格立刻跳出这一层 `k`。
 - 为什么这样做：循环移位等价于「从某个位置开始读一圈」，所以「原块是排序块的循环移位」既是必要条件也是充分条件——每块能独立旋转，块与块之间互不影响。
-- 关键状态 / 变量：`off`（枚举起始偏移）、`tmp`（本块是否找到可行旋转）、`flag`（这个 `k` 是否所有块都通过）。
+- 关键状态 / 变量：`off`（枚举起始偏移）、`matched`（本块是否找到可行旋转）、`ok`（这个 `k` 是否所有块都通过）。
 - 为什么能够得到正确答案：条件逐块独立成立 ⟺ 能把每块旋转成排序块 ⟺ 整体有序；枚举穷尽所有因数，求和即为答案。
 
 ## 代码
 
 ```cpp
+// 3886. Sum of Sortable Integers
+// 只有 n 的因数 k 能当块长。把数组按 k 切块，每块必须能靠循环移位变成该段排序后的样子；
+// 循环移位匹配只需试 k 个偏移量，所有块都能匹配就把 k 计入答案。
 class Solution {
 public:
     int sortableIntegers(vector<int>& nums) {
-        int n=nums.size();
-        int res=0;
-        vector<int>ordered_nums=nums;
-        sort(ordered_nums.begin(),ordered_nums.end());
-        unordered_set<int>k_set;
-        for(int i=1;i<=sqrt(n);i++){
-            if(n%i==0){
-                k_set.insert(i);
-                k_set.insert(n/i);
+        int n = nums.size();
+        int res = 0;
+        vector<int> orderedNums = nums;
+        sort(orderedNums.begin(), orderedNums.end());
+        // 先把 n 的所有因数收集起来当候选块长
+        unordered_set<int> kSet;
+        for (int i = 1; i <= sqrt(n); i++) {
+            if (n % i == 0) {
+                kSet.insert(i);
+                kSet.insert(n / i);
             }
         }
-        for(int k:k_set){
-            bool flag=true;
-            for(int left=0;left<n;left+=k){
-                bool tmp=false;
-                for(int off=0;off<k;off++){
-                    for(int pos=0;pos<k;pos++){
-                        if(nums[left+pos]!=ordered_nums[left+(pos+off)%k]){
+        for (int k : kSet) {
+            bool ok = true;
+            for (int left = 0; left < n; left += k) {
+                bool matched = false;
+                // 试遍所有循环偏移 off，看本块能否与排序后的本段逐位对齐
+                for (int off = 0; off < k; off++) {
+                    for (int pos = 0; pos < k; pos++) {
+                        if (nums[left + pos] != orderedNums[left + (pos + off) % k]) {
                             break;
                         }
-                        if(pos==k-1){
-                            tmp=true;
+                        if (pos == k - 1) {
+                            matched = true;
                         }
                     }
-                    if(tmp){
+                    if (matched) {
                         break;
                     }
                 }
-                if(!tmp){
-                    flag=false;
+                if (!matched) {
+                    ok = false;
                     break;
                 }
             }
-            if(flag){
-                res+=k;
+            if (ok) {
+                res += k;
             }
         }
         return res;
@@ -81,13 +86,13 @@ public:
 
 - 正确性：正确。本机对拍验证：与暴力解（枚举每个整除 n 的 k、逐块枚举旋转、直接模拟旋转结果比较）随机对比 3000 组小数据（n ≤ 9，值域 1..4，重复值很多）零不一致；样例 `[3,1,2]`→3、`[7,6,5]`→0、`[5,8]`→3 全部符合。
 - 关键实现：`k` 用试除法一次取齐全部因数，避免从 1 到 n 逐个判断整除；`off` 取 `(pos+off)%k` 相当于把排序块左起第 `off` 位对齐到原块首位。
-- 潜在 Bug：无明显错误。要注意 `pos==k-1` 时才置 `tmp=true`（表示「整块都对上」），如果提前在循环外判断会漏掉；`res` 用 `int` 累加，`n ≤ 1e5` 时因数和最大约 2.5e5，不会溢出。
+- 潜在 Bug：无明显错误。要注意 `pos==k-1` 时才置 `matched=true`（表示「整块都对上」），如果提前在循环外判断会漏掉；`res` 用 `int` 累加，`n ≤ 1e5` 时因数和最大约 2.5e5，不会溢出。
 - 可以改进的地方：`unordered_set` 遍历顺序随机、缓存不友好，换成 `vector` 存因数并排序会更稳；判断循环同构可以用 KMP（在 `nums块+nums块` 里搜 `排序块`，单块 O(k)），把最坏复杂度从 O(k²) 降到 O(k)。
 
 ## 复杂度
 
 - 时间复杂度：最坏 O(Σ_{k|n} n·k)——每个因数下每块最多试 `k` 个偏移、每次最多比 `k` 位。实际上绝大多数块第一个偏移就失败，实测 `n = 10⁵`（已排序 / 全逆序 / 随机 / 大量重复值 / 每块都旋转过）都 ≤ 15 ms。
-- 空间复杂度：O(n)，`ordered_nums` 副本 + `k_set`（因数个数 ≤ 128）。排序本身 O(n log n)。
+- 空间复杂度：O(n)，`orderedNums` 副本 + `kSet`（因数个数 ≤ 128）。排序本身 O(n log n)。
 
 ## 易错点
 

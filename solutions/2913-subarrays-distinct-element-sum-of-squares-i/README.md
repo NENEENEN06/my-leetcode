@@ -13,22 +13,24 @@
 
 - 直接枚举所有子数组：外层 `i` 定起点，内层 `j` 向右扩展终点。
 - 内层边扩展边用 `unordered_set` 维护「当前子数组里出现过哪些值」，所以集合大小就是不同元素个数——不用每次重新扫一遍子数组。
-- 每扩展一步（插入 `nums[j]` 之后）就把 `st.size()²` 加进答案：这一步恰好对应「以 i 为起点、以 j 为终点」的那个子数组。
+- 每扩展一步（插入 `nums[j]` 之后）就把 `seen.size()²` 加进答案：这一步恰好对应「以 i 为起点、以 j 为终点」的那个子数组。
 - 这样每个子数组只被访问一次，`O(n²)` 个区间，每个区间的统计是均摊 O(1)。
 
 ## 代码
 
 ```cpp
+// 2913. Subarrays Distinct Element Sum of Squares I
+// 直接枚举右端点并把元素塞进集合，就能 O(1) 拿到当前子数组的去重个数，累加其平方。
 class Solution {
 public:
     int sumCounts(vector<int>& nums) {
-        int res=0;
-        int n=nums.size();
-        for(int i=0;i<n;i++){
-            unordered_set<int> st;
-            for(int j=i;j<n;j++){
-                st.insert(nums[j]);
-                res+=st.size()*st.size();
+        int res = 0;
+        int n = nums.size();
+        for (int i = 0; i < n; i++) {
+            unordered_set<int> seen;   // 子数组 nums[i..j] 的去重元素
+            for (int j = i; j < n; j++) {
+                seen.insert(nums[j]);
+                res += seen.size() * seen.size();
             }
         }
         return res;
@@ -39,10 +41,10 @@ public:
 ## 代码分析
 
 - 正确性：正确
-- 关键实现：`st` 声明在外层循环里 → 每个新起点自动清空，不需要手动 `clear()`；`res += st.size()*st.size()` 放在 `insert` **之后**，所以统计的就是含 `nums[j]` 的这个子数组
-- 潜在问题：`st.size()` 返回 `size_t`（无符号），`size_t * size_t` 的结果再加到 `int res` 上是一次隐式的窄化转换。本题 `n ≤ 100`，最大总和约 `5050 × 100² ≈ 5.05e7`，int 装得下，不会出错；但如果把同一段代码搬到 n 大得多的场景，就得先把乘法结果转成 `long long`，否则可能溢出错位
+- 关键实现：`seen` 声明在外层循环里 → 每个新起点自动清空，不需要手动 `clear()`；`res += seen.size()*seen.size()` 放在 `insert` **之后**，所以统计的就是含 `nums[j]` 的这个子数组
+- 潜在问题：`seen.size()` 返回 `size_t`（无符号），`size_t * size_t` 的结果再加到 `int res` 上是一次隐式的窄化转换。本题 `n ≤ 100`，最大总和约 `5050 × 100² ≈ 5.05e7`，int 装得下，不会出错；但如果把同一段代码搬到 n 大得多的场景，就得先把乘法结果转成 `long long`，否则可能溢出错位
 - 依赖预编译头：代码里用了 `unordered_set` 但没写 `#include <unordered_set>`，LeetCode 的预编译头兜住了；本地单独编译需要补上
-- 可以改进的地方：把 `res` 声明成 `long long`、写成 `res += (long long)st.size() * st.size()`，对约束变化免疫，代价是零
+- 可以改进的地方：把 `res` 声明成 `long long`、写成 `res += (long long)seen.size() * seen.size()`，对约束变化免疫，代价是零
 
 ## 复杂度
 

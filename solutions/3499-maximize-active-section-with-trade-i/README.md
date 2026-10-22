@@ -24,37 +24,43 @@
 
 - `cntZero[0]` 存上一个 0 段的长度，`cntZero[1]` 存当前 0 段的长度；
 - 扫到 0 时先把 `cntZero[1]` 挪进 `cntZero[0]`，再用内层 `while` 一次吞掉整段 0，得到本段长度；
-- 每结束一段就用 `cntZero[0] + cntZero[1]` 更新 `cnt`（相邻两段 0 之间的 1 段天然存在，一定是个合法交易对象）。
+- 每结束一段就用 `cntZero[0] + cntZero[1]` 更新 `best`（相邻两段 0 之间的 1 段天然存在，一定是个合法交易对象）。
 
-最后 `cntZero[0] == 0` 说明整串里 0 段不超过一个（或者根本没有 0），就没有"被 0 夹住"的 1 段可动，直接返回 `1` 的总数；否则返回 `cnt + totalOne`。
+最后 `cntZero[0] == 0` 说明整串里 0 段不超过一个（或者根本没有 0），就没有"被 0 夹住"的 1 段可动，直接返回 `1` 的总数；否则返回 `best + totalOne`。
 
 ## 代码
 
 ```cpp
+// 3499. Maximize Active Section with Trade I
+// 一次交易只会把夹在两段 0 之间的整段变成 1，增益等于相邻两个 0 段长度之和，
+// 取最大的那一对，再加上原本就有的 1 的个数。
 class Solution {
 public:
     int maxActiveSectionsAfterTrade(string s) {
-        int totalOne=0;
-        int n=s.size();
-        vector<int>cntZero(2,0);
-        int cnt=0;
-        for(int i=0;i<n;i++){
-            if(s[i]=='1'){
+        int totalOne = 0;
+        int n = s.size();
+        // cntZero[0] 是上一段连续 0 的长度，cntZero[1] 是当前这段
+        vector<int> cntZero(2, 0);
+        int best = 0;
+        for (int i = 0; i < n; i++) {
+            if (s[i] == '1') {
                 totalOne++;
                 continue;
             }
-            cntZero[0]=cntZero[1];
-            cntZero[1]=1;
-            while(i+1<n&&s[i+1]=='0'){
+            // 遇到一段新的 0：上一段往后顺移，当前段从 1 开始数
+            cntZero[0] = cntZero[1];
+            cntZero[1] = 1;
+            while (i + 1 < n && s[i + 1] == '0') {
                 cntZero[1]++;
                 i++;
             }
-            cnt=max(cnt,cntZero[0]+cntZero[1]);
+            best = max(best, cntZero[0] + cntZero[1]);
         }
-        if(cntZero[0]==0){
+        // 左侧没有 0 段就没法做交易
+        if (cntZero[0] == 0) {
             return totalOne;
         }
-        return cnt+totalOne;
+        return best + totalOne;
     }
 };
 ```
@@ -75,7 +81,7 @@ public:
 
 - 净收益是"两个 0 段之和"，**不是**"两个 0 段之和减去中间 1 段的长度"——中间的 1 段变成 0 之后会被那个大 0 段一起变回 1，先减后加，抵消掉了。
 - "被 0 包围"只在原串里对 1 段成立；但第二步找 0 段时的"被 1 包围"要用两端补了 `1` 的视角看，所以贴着收尾边界的 0 段也能被整段点亮（例如 `s = "01000"` 答案是 5，整串变 1）。
-- 一次交易都没有合法对象时要返回 `1` 的总数，不能因为 `cnt = 0` 就当答案 0。像 `s = "0011"`，`1` 段顶在右边界、左边只有一个 0 段，交易做不了，答案就是 2。
+- 一次交易都没有合法对象时要返回 `1` 的总数，不能因为 `best = 0` 就当答案 0。像 `s = "0011"`，`1` 段顶在右边界、左边只有一个 0 段，交易做不了，答案就是 2。
 - 全是 `1` 或全是 `0` 的极端串都要能过：`"111" -> 3`，`"0000" -> 0`。
 
 ## 总结

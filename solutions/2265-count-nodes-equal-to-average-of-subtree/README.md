@@ -16,27 +16,34 @@
 - 算法流程：
   1. 空节点返回 `{0, 0}`。
   2. 递归求左右子树的 `(size, sum)`。
-  3. 合并出当前子树：`size = leftSize + rightSize + 1`，`sum = leftSum + rightSum + Node->val`。
-  4. 若 `sum / size == Node->val`，则 `ans++`。
+  3. 合并出当前子树：`size = leftSize + rightSize + 1`，`sum = leftSum + rightSum + node->val`。
+  4. 若 `sum / size == node->val`，则 `ans++`。
   5. 返回 `{size, sum}` 给父节点。
 - 为什么这样做：子树的节点数与和，都能由左右子树的两项数据 **O(1)** 合并得到，满足可合并性，所以一趟后序遍历即可自底向上把每个子树统计出来，无需对每个节点重新遍历它的整棵子树。
 - 关键状态 / 变量：`pair` 的语义是 `{size, sum}`，返回与解包的字段顺序必须一致；`ans` 是全局计数器。
-- 为什么能够得到正确答案：每个节点在回程时都已拿到整棵子树的节点数与和，`sum / size` 正是题目要求的平均值；由于本题 `0 <= Node.val`，所有和与个数均非负，C++ 的整数除法等同于**向下取整**，与题意一致。
+- 为什么能够得到正确答案：每个节点在回程时都已拿到整棵子树的节点数与和，`sum / size` 正是题目要求的平均值；由于本题 `0 <= node.val`，所有和与个数均非负，C++ 的整数除法等同于**向下取整**，与题意一致。
 
 ## 代码
 
 ```cpp
+// 2265. Count Nodes Equal to Average of Subtree
+// 后序遍历返回 (子树节点数, 子树元素和)，回溯时顺手算出平均值，再与当前节点值比较。
 class Solution {
 public:
-    int ans=0;
-    pair<int,int>dfs(TreeNode* Node){
-        if(Node==nullptr){return {0,0};}
-        auto [leftSize,leftSum]=dfs(Node->left);
-        auto [rightSize,rightSum]=dfs(Node->right);
-        int size=leftSize+rightSize+1;
-        int sum=leftSum+rightSum+Node->val;
-        if(sum/size==Node->val){ans++;}
-        return {size,sum};
+    int ans = 0;
+    pair<int, int> dfs(TreeNode* node) {
+        if (node == nullptr) {
+            return {0, 0};
+        }
+        auto [leftSize, leftSum] = dfs(node->left);
+        auto [rightSize, rightSum] = dfs(node->right);
+        int size = leftSize + rightSize + 1;
+        int sum = leftSum + rightSum + node->val;
+        // 整数除法即题面要求的平均值，相等就计入答案
+        if (sum / size == node->val) {
+            ans++;
+        }
+        return {size, sum};
     }
     int averageOfSubtree(TreeNode* root) {
         dfs(root);
@@ -49,7 +56,7 @@ public:
 
 - 正确性：正确。
 - 关键实现：DFS 返回 `(size, sum)`，在回程合并出当前子树统计量后立即判等，一趟遍历完成统计与计数。
-- 潜在 Bug：`ans` 是成员变量，而 `averageOfSubtree` 内部没有重置它。LeetCode 每个测试用例会新建 `Solution` 实例，因此不受影响；但若在**同一个对象**上多次调用该方法，答案会累加。另外，整数除法只有在被除数非负时才等价于向下取整——本题 `0 <= Node.val <= 1000` 保证成立；若值域含负数，C++ 除法向零截断会与题意不符。
+- 潜在 Bug：`ans` 是成员变量，而 `averageOfSubtree` 内部没有重置它。LeetCode 每个测试用例会新建 `Solution` 实例，因此不受影响；但若在**同一个对象**上多次调用该方法，答案会累加。另外，整数除法只有在被除数非负时才等价于向下取整——本题 `0 <= node.val <= 1000` 保证成立；若值域含负数，C++ 除法向零截断会与题意不符。
 - 可以改进的地方：把 `ans` 改为参数（引用）传回或作为返回值累加，消除对成员状态的依赖；也可把判等与返回合并表达，但当前写法在可读性上已经足够。
 
 ## 复杂度
@@ -61,7 +68,7 @@ public:
 
 - `pair` 的字段顺序容易写反：返回的是 `{size, sum}`，解包时也要按 `(size, sum)` 对应，交换会算出错误结果。
 - 平均值要**向下取整**：本解法依赖非负整数除法天然向下取整；一旦值域含负数就不能直接用 `/`。
-- 判断的是「节点值 == **子树**平均值」，子树包含节点自身，所以 `size` 要 `+1`、`sum` 要加上当前 `Node->val`，别漏掉自己。
+- 判断的是「节点值 == **子树**平均值」，子树包含节点自身，所以 `size` 要 `+1`、`sum` 要加上当前 `node->val`，别漏掉自己。
 - 空节点基准 `{0, 0}` 要处理正确，避免对空子树做除法。
 - 成员变量 `ans` 存在跨调用状态残留（见「代码分析」），多测共用一个对象时会错。
 

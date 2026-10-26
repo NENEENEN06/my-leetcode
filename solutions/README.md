@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 49 道题** · Easy 14 · Medium 30 · Hard 5
+**共 50 道题** · Easy 14 · Medium 31 · Hard 5
 
 ## 快速跳转
 
-**按难度**：[Easy 14](#easy--14-题) · [Medium 30](#medium--30-题) · [Hard 5](#hard--5-题)
+**按难度**：[Easy 14](#easy--14-题) · [Medium 31](#medium--31-题) · [Hard 5](#hard--5-题)
 
-**按算法**：[Array 23](#array--23-题) · [String 18](#string--18-题) · [Math 14](#math--14-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Sorting 5](#sorting--5-题) · [Enumeration 4](#enumeration--4-题) · [Matrix 4](#matrix--4-题) · [Binary Search 3](#binary-search--3-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Depth-First Search 2](#depth-first-search--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Breadth-First Search 1](#breadth-first-search--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题) · [Union-Find 1](#union-find--1-题)
+**按算法**：[Array 24](#array--24-题) · [String 18](#string--18-题) · [Math 14](#math--14-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Matrix 5](#matrix--5-题) · [Sorting 5](#sorting--5-题) · [Enumeration 4](#enumeration--4-题) · [Binary Search 3](#binary-search--3-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Depth-First Search 3](#depth-first-search--3-题) · [Breadth-First Search 2](#breadth-first-search--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Union-Find 2](#union-find--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -55,6 +55,7 @@
 | [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) | Smallest Index With Digit Sum Equal to Index | Easy | Array, Math |
 | [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) | Minimum Swaps to Sort by Digit Sum | Medium | Array, Hash Table, Sorting |
 | [3568](3568-minimum-moves-to-clean-the-classroom/README.md) | Minimum Moves to Clean the Classroom | Medium | BFS, Bit Manipulation, Array, Matrix |
+| [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) | Count Islands With Total Value Divisible by K | Medium | Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix |
 | [3644](3644-maximum-k-to-sort-a-permutation/README.md) | Maximum K to Sort a Permutation | Medium | Array, Bit Manipulation |
 | [3723](3723-maximize-sum-of-squares-of-digits/README.md) | Maximize Sum of Squares of Digits | Medium | Math, Greedy |
 | [3727](3727-maximum-alternating-sum-of-squares/README.md) | Maximum Alternating Sum of Squares | Medium | Array, Greedy, Sorting |
@@ -68,7 +69,7 @@
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 
-共 49 道题。
+共 50 道题。
 
 ## 按难度
 
@@ -89,7 +90,7 @@
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 
-### Medium · 30 题
+### Medium · 31 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -113,6 +114,7 @@
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Array, Dynamic Programming, Math
 - [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Array, Hash Table, Sorting
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · BFS, Bit Manipulation, Array, Matrix
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix
 - [3644](3644-maximum-k-to-sort-a-permutation/README.md) Maximum K to Sort a Permutation · Array, Bit Manipulation
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Math, Greedy
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Array, Greedy, Sorting
@@ -132,7 +134,7 @@
 
 ## 按算法
 
-### Array · 23 题
+### Array · 24 题
 
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
 - [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
@@ -149,6 +151,7 @@
 - [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Easy
 - [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
 - [3644](3644-maximum-k-to-sort-a-permutation/README.md) Maximum K to Sort a Permutation · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy
@@ -237,6 +240,14 @@
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 
+### Matrix · 5 题
+
+- [0835](0835-image-overlap/README.md) Image Overlap · Medium
+- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
+- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
+
 ### Sorting · 5 题
 
 - [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
@@ -252,13 +263,6 @@
 - [3499](3499-maximize-active-section-with-trade-i/README.md) Maximize Active Section with Trade I · Medium
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
 
-### Matrix · 4 题
-
-- [0835](0835-image-overlap/README.md) Image Overlap · Medium
-- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
-- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
-- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
-
 ### Binary Search · 3 题
 
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
@@ -271,10 +275,16 @@
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
 - [3644](3644-maximum-k-to-sort-a-permutation/README.md) Maximum K to Sort a Permutation · Medium
 
-### Depth-First Search · 2 题
+### Depth-First Search · 3 题
 
 - [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
 - [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
+
+### Breadth-First Search · 2 题
+
+- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
 
 ### Geometry · 2 题
 
@@ -291,6 +301,11 @@
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
 
+### Union-Find · 2 题
+
+- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
+
 ### Backtracking · 1 题
 
 - [0022](0022-generate-parentheses/README.md) Generate Parentheses · Medium
@@ -306,10 +321,6 @@
 ### Binary Tree · 1 题
 
 - [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Medium
-
-### Breadth-First Search · 1 题
-
-- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
 
 ### Combinatorics · 1 题
 
@@ -346,9 +357,5 @@
 ### Two Pointers · 1 题
 
 - [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) Maximum Twin Sum of a Linked List · Medium
-
-### Union-Find · 1 题
-
-- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
 
 <!-- leetcode-index:end -->

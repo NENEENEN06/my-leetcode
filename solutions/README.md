@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 50 道题** · Easy 14 · Medium 31 · Hard 5
+**共 51 道题** · Easy 15 · Medium 31 · Hard 5
 
 ## 快速跳转
 
-**按难度**：[Easy 14](#easy--14-题) · [Medium 31](#medium--31-题) · [Hard 5](#hard--5-题)
+**按难度**：[Easy 15](#easy--15-题) · [Medium 31](#medium--31-题) · [Hard 5](#hard--5-题)
 
-**按算法**：[Array 24](#array--24-题) · [String 18](#string--18-题) · [Math 14](#math--14-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Greedy 5](#greedy--5-题) · [Matrix 5](#matrix--5-题) · [Sorting 5](#sorting--5-题) · [Enumeration 4](#enumeration--4-题) · [Binary Search 3](#binary-search--3-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Depth-First Search 3](#depth-first-search--3-题) · [Breadth-First Search 2](#breadth-first-search--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Union-Find 2](#union-find--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
+**按算法**：[Array 24](#array--24-题) · [String 18](#string--18-题) · [Math 14](#math--14-题) · [Stack 9](#stack--9-题) · [Hash Table 8](#hash-table--8-题) · [Dynamic Programming 7](#dynamic-programming--7-题) · [Matrix 6](#matrix--6-题) · [Greedy 5](#greedy--5-题) · [Sorting 5](#sorting--5-题) · [Enumeration 4](#enumeration--4-题) · [Binary Search 3](#binary-search--3-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Depth-First Search 3](#depth-first-search--3-题) · [Breadth-First Search 2](#breadth-first-search--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Union-Find 2](#union-find--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -68,12 +68,13 @@
 | [3903](3903-smallest-stable-index-i/README.md) | Smallest Stable Index I | Easy | Array, Prefix Sum |
 | [3904](3904-smallest-stable-index-ii/README.md) | Smallest Stable Index II | Medium | Array, Prefix/Suffix Preprocessing |
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
+| [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 50 道题。
+共 51 道题。
 
 ## 按难度
 
-### Easy · 14 题
+### Easy · 15 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · String, Stack
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Math, Geometry
@@ -89,6 +90,7 @@
 - [3870](3870-count-commas-in-range/README.md) Count Commas in Range · Math
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
+- [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Matrix
 
 ### Medium · 31 题
 
@@ -232,6 +234,15 @@
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
 
+### Matrix · 6 题
+
+- [0835](0835-image-overlap/README.md) Image Overlap · Medium
+- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
+- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
+- [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Easy
+
 ### Greedy · 5 题
 
 - [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
@@ -239,14 +250,6 @@
 - [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
-
-### Matrix · 5 题
-
-- [0835](0835-image-overlap/README.md) Image Overlap · Medium
-- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
-- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
-- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
-- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
 
 ### Sorting · 5 题
 

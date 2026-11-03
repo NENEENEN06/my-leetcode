@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 54 道题** · Easy 15 · Medium 34 · Hard 5
+**共 55 道题** · Easy 16 · Medium 34 · Hard 5
 
 ## 快速跳转
 
-**按难度**：[Easy 15](#easy--15-题) · [Medium 34](#medium--34-题) · [Hard 5](#hard--5-题)
+**按难度**：[Easy 16](#easy--16-题) · [Medium 34](#medium--34-题) · [Hard 5](#hard--5-题)
 
-**按算法**：[Array 27](#array--27-题) · [String 18](#string--18-题) · [Math 16](#math--16-题) · [Stack 9](#stack--9-题) · [Dynamic Programming 8](#dynamic-programming--8-题) · [Hash Table 8](#hash-table--8-题) · [Matrix 7](#matrix--7-题) · [Sorting 6](#sorting--6-题) · [Greedy 5](#greedy--5-题) · [Enumeration 4](#enumeration--4-题) · [Binary Search 3](#binary-search--3-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Depth-First Search 3](#depth-first-search--3-题) · [Breadth-First Search 2](#breadth-first-search--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Union-Find 2](#union-find--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
+**按算法**：[Array 28](#array--28-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Stack 9](#stack--9-题) · [Dynamic Programming 8](#dynamic-programming--8-题) · [Hash Table 8](#hash-table--8-题) · [Matrix 7](#matrix--7-题) · [Sorting 6](#sorting--6-题) · [Greedy 5](#greedy--5-题) · [Enumeration 4](#enumeration--4-题) · [Binary Search 3](#binary-search--3-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Depth-First Search 3](#depth-first-search--3-题) · [Breadth-First Search 2](#breadth-first-search--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Sliding Window 2](#sliding-window--2-题) · [Union-Find 2](#union-find--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题) · [Two Pointers 1](#two-pointers--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -62,6 +62,7 @@
 | [3665](3665-twisted-mirror-path-count/README.md) | Twisted Mirror Path Count | Medium | Array, Dynamic Programming, Matrix |
 | [3723](3723-maximize-sum-of-squares-of-digits/README.md) | Maximize Sum of Squares of Digits | Medium | Math, Greedy |
 | [3727](3727-maximum-alternating-sum-of-squares/README.md) | Maximum Alternating Sum of Squares | Medium | Array, Greedy, Sorting |
+| [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) | Minimum Moves to Equal Array Elements III | Easy | Array, Math |
 | [3863](3863-minimum-operations-to-sort-a-string/README.md) | Minimum Operations to Sort a String | Medium | String |
 | [3870](3870-count-commas-in-range/README.md) | Count Commas in Range | Easy | Math |
 | [3871](3871-count-commas-in-range-ii/README.md) | Count Commas in Range II | Medium | Math |
@@ -73,11 +74,11 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 54 道题。
+共 55 道题。
 
 ## 按难度
 
-### Easy · 15 题
+### Easy · 16 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · String, Stack
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Math, Geometry
@@ -90,6 +91,7 @@
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Enumeration, Array, Hash Table
 - [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · String, Simulation
 - [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Array, Math
+- [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) Minimum Moves to Equal Array Elements III · Array, Math
 - [3870](3870-count-commas-in-range/README.md) Count Commas in Range · Math
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Array, Math
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
@@ -142,7 +144,7 @@
 
 ## 按算法
 
-### Array · 27 题
+### Array · 28 题
 
 - [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
 - [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
@@ -165,6 +167,7 @@
 - [3644](3644-maximum-k-to-sort-a-permutation/README.md) Maximum K to Sort a Permutation · Medium
 - [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
+- [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) Minimum Moves to Equal Array Elements III · Easy
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy
 - [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Medium
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
@@ -193,7 +196,7 @@
 - [3499](3499-maximize-active-section-with-trade-i/README.md) Maximize Active Section with Trade I · Medium
 - [3863](3863-minimum-operations-to-sort-a-string/README.md) Minimum Operations to Sort a String · Medium
 
-### Math · 16 题
+### Math · 17 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
 - [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
@@ -206,6 +209,7 @@
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
 - [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Easy
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
+- [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) Minimum Moves to Equal Array Elements III · Easy
 - [3870](3870-count-commas-in-range/README.md) Count Commas in Range · Easy
 - [3871](3871-count-commas-in-range-ii/README.md) Count Commas in Range II · Medium
 - [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy

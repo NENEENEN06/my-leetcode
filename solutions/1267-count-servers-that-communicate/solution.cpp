@@ -1,3 +1,5 @@
+// 1267. Count Servers that Communicate
+// 先数出每行、每列各有多少台服务器，再逐台判「同行或同列还有第二台」，即 row[i] > 1 或 col[j] > 1。
 class Solution {
 public:
     int countServers(vector<vector<int>>& grid) {

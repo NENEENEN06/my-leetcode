@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 57 道题** · Easy 17 · Medium 35 · Hard 5
+**共 58 道题** · Easy 17 · Medium 36 · Hard 5
 
 ## 快速跳转
 
-**按难度**：[Easy 17](#easy--17-题) · [Medium 35](#medium--35-题) · [Hard 5](#hard--5-题)
+**按难度**：[Easy 17](#easy--17-题) · [Medium 36](#medium--36-题) · [Hard 5](#hard--5-题)
 
-**按算法**：[Array 30](#array--30-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Dynamic Programming 8](#dynamic-programming--8-题) · [Sorting 8](#sorting--8-题) · [Matrix 7](#matrix--7-题) · [Greedy 5](#greedy--5-题) · [Binary Search 4](#binary-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Depth-First Search 3](#depth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Breadth-First Search 2](#breadth-first-search--2-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Union-Find 2](#union-find--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 31](#array--31-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Dynamic Programming 8](#dynamic-programming--8-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 5](#greedy--5-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -34,6 +34,7 @@
 | [1111](1111-maximum-nesting-depth-of-two-valid-parentheses-strings/README.md) | Maximum Nesting Depth of Two Valid Parentheses Strings | Medium | String, Stack |
 | [1190](1190-reverse-substrings-between-each-pair-of-parentheses/README.md) | Reverse Substrings Between Each Pair of Parentheses | Medium | String, Stack |
 | [1254](1254-number-of-closed-islands/README.md) | Number of Closed Islands | Medium | Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix |
+| [1267](1267-count-servers-that-communicate/README.md) | Count Servers that Communicate | Medium | Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix, Counting |
 | [1385](1385-find-the-distance-value-between-two-arrays/README.md) | Find the Distance Value Between Two Arrays | Easy | Array, Two Pointers, Binary Search, Sorting |
 | [1401](1401-circle-and-rectangle-overlapping/README.md) | Circle and Rectangle Overlapping | Medium | Math, Geometry |
 | [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Array, Hash Table, Binary Search, Dynamic Programming, Sliding Window |
@@ -76,7 +77,7 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 57 道题。
+共 58 道题。
 
 ## 按难度
 
@@ -100,7 +101,7 @@
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 - [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Matrix
 
-### Medium · 35 题
+### Medium · 36 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -113,6 +114,7 @@
 - [1111](1111-maximum-nesting-depth-of-two-valid-parentheses-strings/README.md) Maximum Nesting Depth of Two Valid Parentheses Strings · String, Stack
 - [1190](1190-reverse-substrings-between-each-pair-of-parentheses/README.md) Reverse Substrings Between Each Pair of Parentheses · String, Stack
 - [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix
+- [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix, Counting
 - [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Math, Geometry
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Array, Hash Table, Binary Search, Dynamic Programming, Sliding Window
 - [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · String, Stack, Greedy
@@ -148,12 +150,13 @@
 
 ## 按算法
 
-### Array · 30 题
+### Array · 31 题
 
 - [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
 - [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
 - [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
 - [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Easy
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
@@ -257,6 +260,17 @@
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
 - [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Medium
 
+### Matrix · 8 题
+
+- [0835](0835-image-overlap/README.md) Image Overlap · Medium
+- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
+- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
+- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
+- [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Medium
+- [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Easy
+
 ### Sorting · 8 题
 
 - [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
@@ -267,16 +281,6 @@
 - [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
-
-### Matrix · 7 题
-
-- [0835](0835-image-overlap/README.md) Image Overlap · Medium
-- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
-- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
-- [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
-- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
-- [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Medium
-- [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Easy
 
 ### Greedy · 5 题
 
@@ -293,6 +297,13 @@
 - [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
 
+### Depth-First Search · 4 题
+
+- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
+- [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Medium
+- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
+
 ### Enumeration · 4 题
 
 - [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
@@ -306,10 +317,10 @@
 - [3568](3568-minimum-moves-to-clean-the-classroom/README.md) Minimum Moves to Clean the Classroom · Medium
 - [3644](3644-maximum-k-to-sort-a-permutation/README.md) Maximum K to Sort a Permutation · Medium
 
-### Depth-First Search · 3 题
+### Breadth-First Search · 3 题
 
 - [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
-- [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Medium
+- [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
 - [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
 
 ### Sliding Window · 3 题
@@ -318,9 +329,10 @@
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
 - [2747](2747-count-zero-request-servers/README.md) Count Zero Request Servers · Medium
 
-### Breadth-First Search · 2 题
+### Union-Find · 3 题
 
 - [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
+- [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
 - [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
 
 ### Geometry · 2 题
@@ -337,11 +349,6 @@
 
 - [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Easy
 - [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) Maximum Twin Sum of a Linked List · Medium
-
-### Union-Find · 2 题
-
-- [1254](1254-number-of-closed-islands/README.md) Number of Closed Islands · Medium
-- [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
 
 ### Backtracking · 1 题
 
@@ -362,6 +369,10 @@
 ### Combinatorics · 1 题
 
 - [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
+
+### Counting · 1 题
+
+- [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
 
 ### Heap (Priority Queue) · 1 题
 

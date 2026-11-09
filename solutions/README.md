@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 58 道题** · Easy 17 · Medium 36 · Hard 5
+**共 59 道题** · Easy 17 · Medium 36 · Hard 6
 
 ## 快速跳转
 
-**按难度**：[Easy 17](#easy--17-题) · [Medium 36](#medium--36-题) · [Hard 5](#hard--5-题)
+**按难度**：[Easy 17](#easy--17-题) · [Medium 36](#medium--36-题) · [Hard 6](#hard--6-题)
 
-**按算法**：[Array 31](#array--31-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Dynamic Programming 8](#dynamic-programming--8-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 5](#greedy--5-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Heap (Priority Queue) 1](#heap-priority-queue--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 32](#array--32-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Dynamic Programming 8](#dynamic-programming--8-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 6](#greedy--6-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -39,6 +39,7 @@
 | [1401](1401-circle-and-rectangle-overlapping/README.md) | Circle and Rectangle Overlapping | Medium | Math, Geometry |
 | [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Array, Hash Table, Binary Search, Dynamic Programming, Sliding Window |
 | [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) | Minimum Insertions to Balance a Parentheses String | Medium | String, Stack, Greedy |
+| [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) | Find Servers That Handled Most Number of Requests | Hard | Array, Greedy, Heap (Priority Queue), Ordered Set |
 | [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) | Maximum Nesting Depth of the Parentheses | Easy | String, Stack |
 | [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) | Number of Sets of K Non-Overlapping Line Segments | Medium | Math, Dynamic Programming, Combinatorics |
 | [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) | Evaluate the Bracket Pairs of a String | Medium | Array, Hash Table, String |
@@ -77,7 +78,7 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 58 道题。
+共 59 道题。
 
 ## 按难度
 
@@ -140,17 +141,18 @@
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Array, Prefix/Suffix Preprocessing
 - [3942](3942-minimum-operations-to-sort-a-permutation/README.md) Minimum Operations to Sort a Permutation · Array
 
-### Hard · 5 题
+### Hard · 6 题
 
 - [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · String, Dynamic Programming
 - [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · String, Dynamic Programming
+- [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Array, Greedy, Heap (Priority Queue), Ordered Set
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Array, Dynamic Programming, Matrix
 - [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Bit Manipulation, Greedy, Array, Hash Table
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Array, Math, Sorting, Enumeration
 
 ## 按算法
 
-### Array · 31 题
+### Array · 32 题
 
 - [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
 - [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
@@ -159,6 +161,7 @@
 - [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
 - [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Easy
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
+- [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
 - [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
@@ -282,10 +285,11 @@
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
 
-### Greedy · 5 题
+### Greedy · 6 题
 
 - [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
 - [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · Medium
+- [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
 - [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
@@ -340,6 +344,11 @@
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
 - [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Medium
 
+### Heap (Priority Queue) · 2 题
+
+- [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
+- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+
 ### Linked List · 2 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
@@ -374,9 +383,9 @@
 
 - [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
 
-### Heap (Priority Queue) · 1 题
+### Ordered Set · 1 题
 
-- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+- [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
 
 ### Prefix Sum · 1 题
 

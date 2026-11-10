@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 59 道题** · Easy 17 · Medium 36 · Hard 6
+**共 60 道题** · Easy 17 · Medium 37 · Hard 6
 
 ## 快速跳转
 
-**按难度**：[Easy 17](#easy--17-题) · [Medium 36](#medium--36-题) · [Hard 6](#hard--6-题)
+**按难度**：[Easy 17](#easy--17-题) · [Medium 37](#medium--37-题) · [Hard 6](#hard--6-题)
 
-**按算法**：[Array 32](#array--32-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Dynamic Programming 8](#dynamic-programming--8-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 6](#greedy--6-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 32](#array--32-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Dynamic Programming 9](#dynamic-programming--9-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 6](#greedy--6-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -64,6 +64,7 @@
 | [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) | Count Islands With Total Value Divisible by K | Medium | Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix |
 | [3644](3644-maximum-k-to-sort-a-permutation/README.md) | Maximum K to Sort a Permutation | Medium | Array, Bit Manipulation |
 | [3665](3665-twisted-mirror-path-count/README.md) | Twisted Mirror Path Count | Medium | Array, Dynamic Programming, Matrix |
+| [3693](3693-climbing-stairs-ii/README.md) | Climbing Stairs II | Medium | Dynamic Programming |
 | [3723](3723-maximize-sum-of-squares-of-digits/README.md) | Maximize Sum of Squares of Digits | Medium | Math, Greedy |
 | [3727](3727-maximum-alternating-sum-of-squares/README.md) | Maximum Alternating Sum of Squares | Medium | Array, Greedy, Sorting |
 | [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) | Minimum Moves to Equal Array Elements III | Easy | Array, Math |
@@ -78,7 +79,7 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 59 道题。
+共 60 道题。
 
 ## 按难度
 
@@ -102,7 +103,7 @@
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 - [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Matrix
 
-### Medium · 36 题
+### Medium · 37 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -133,6 +134,7 @@
 - [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix
 - [3644](3644-maximum-k-to-sort-a-permutation/README.md) Maximum K to Sort a Permutation · Array, Bit Manipulation
 - [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Array, Dynamic Programming, Matrix
+- [3693](3693-climbing-stairs-ii/README.md) Climbing Stairs II · Dynamic Programming
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Math, Greedy
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Array, Greedy, Sorting
 - [3863](3863-minimum-operations-to-sort-a-string/README.md) Minimum Operations to Sort a String · String
@@ -228,6 +230,18 @@
 - [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Medium
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
 
+### Dynamic Programming · 9 题
+
+- [0022](0022-generate-parentheses/README.md) Generate Parentheses · Medium
+- [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
+- [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
+- [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
+- [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
+- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
+- [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
+- [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Medium
+- [3693](3693-climbing-stairs-ii/README.md) Climbing Stairs II · Medium
+
 ### Hash Table · 9 题
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
@@ -251,17 +265,6 @@
 - [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · Medium
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · Easy
 - [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) Maximum Twin Sum of a Linked List · Medium
-
-### Dynamic Programming · 8 题
-
-- [0022](0022-generate-parentheses/README.md) Generate Parentheses · Medium
-- [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
-- [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
-- [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
-- [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
-- [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
-- [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
-- [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Medium
 
 ### Matrix · 8 题
 

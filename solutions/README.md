@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 60 道题** · Easy 17 · Medium 37 · Hard 6
+**共 61 道题** · Easy 17 · Medium 38 · Hard 6
 
 ## 快速跳转
 
-**按难度**：[Easy 17](#easy--17-题) · [Medium 37](#medium--37-题) · [Hard 6](#hard--6-题)
+**按难度**：[Easy 17](#easy--17-题) · [Medium 38](#medium--38-题) · [Hard 6](#hard--6-题)
 
-**按算法**：[Array 32](#array--32-题) · [String 18](#string--18-题) · [Math 17](#math--17-题) · [Dynamic Programming 9](#dynamic-programming--9-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 6](#greedy--6-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 32](#array--32-题) · [Math 18](#math--18-题) · [String 18](#string--18-题) · [Dynamic Programming 9](#dynamic-programming--9-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 7](#greedy--7-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -68,6 +68,7 @@
 | [3723](3723-maximize-sum-of-squares-of-digits/README.md) | Maximize Sum of Squares of Digits | Medium | Math, Greedy |
 | [3727](3727-maximum-alternating-sum-of-squares/README.md) | Maximum Alternating Sum of Squares | Medium | Array, Greedy, Sorting |
 | [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) | Minimum Moves to Equal Array Elements III | Easy | Array, Math |
+| [3789](3789-minimum-cost-to-acquire-required-items/README.md) | Minimum Cost to Acquire Required Items | Medium | Greedy, Math |
 | [3863](3863-minimum-operations-to-sort-a-string/README.md) | Minimum Operations to Sort a String | Medium | String |
 | [3870](3870-count-commas-in-range/README.md) | Count Commas in Range | Easy | Math |
 | [3871](3871-count-commas-in-range-ii/README.md) | Count Commas in Range II | Medium | Math |
@@ -79,7 +80,7 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 60 道题。
+共 61 道题。
 
 ## 按难度
 
@@ -103,7 +104,7 @@
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 - [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Matrix
 
-### Medium · 37 题
+### Medium · 38 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -137,6 +138,7 @@
 - [3693](3693-climbing-stairs-ii/README.md) Climbing Stairs II · Dynamic Programming
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Math, Greedy
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Array, Greedy, Sorting
+- [3789](3789-minimum-cost-to-acquire-required-items/README.md) Minimum Cost to Acquire Required Items · Greedy, Math
 - [3863](3863-minimum-operations-to-sort-a-string/README.md) Minimum Operations to Sort a String · String
 - [3871](3871-count-commas-in-range-ii/README.md) Count Commas in Range II · Math
 - [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Array, Math
@@ -189,6 +191,27 @@
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
 - [3942](3942-minimum-operations-to-sort-a-permutation/README.md) Minimum Operations to Sort a Permutation · Medium
 
+### Math · 18 题
+
+- [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
+- [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
+- [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
+- [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
+- [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Medium
+- [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
+- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+- [2409](2409-count-days-spent-together/README.md) Count Days Spent Together · Easy
+- [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
+- [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Easy
+- [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
+- [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) Minimum Moves to Equal Array Elements III · Easy
+- [3789](3789-minimum-cost-to-acquire-required-items/README.md) Minimum Cost to Acquire Required Items · Medium
+- [3870](3870-count-commas-in-range/README.md) Count Commas in Range · Easy
+- [3871](3871-count-commas-in-range-ii/README.md) Count Commas in Range II · Medium
+- [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy
+- [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Medium
+- [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
+
 ### String · 18 题
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
@@ -209,26 +232,6 @@
 - [3498](3498-reverse-degree-of-a-string/README.md) Reverse Degree of a String · Easy
 - [3499](3499-maximize-active-section-with-trade-i/README.md) Maximize Active Section with Trade I · Medium
 - [3863](3863-minimum-operations-to-sort-a-string/README.md) Minimum Operations to Sort a String · Medium
-
-### Math · 17 题
-
-- [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
-- [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
-- [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
-- [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
-- [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Medium
-- [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
-- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
-- [2409](2409-count-days-spent-together/README.md) Count Days Spent Together · Easy
-- [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
-- [3550](3550-smallest-index-with-digit-sum-equal-to-index/README.md) Smallest Index With Digit Sum Equal to Index · Easy
-- [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
-- [3736](3736-minimum-moves-to-equal-array-elements-iii/README.md) Minimum Moves to Equal Array Elements III · Easy
-- [3870](3870-count-commas-in-range/README.md) Count Commas in Range · Easy
-- [3871](3871-count-commas-in-range-ii/README.md) Count Commas in Range II · Medium
-- [3875](3875-construct-uniform-parity-array-i/README.md) Construct Uniform Parity Array I · Easy
-- [3876](3876-construct-uniform-parity-array-ii/README.md) Construct Uniform Parity Array II · Medium
-- [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
 
 ### Dynamic Programming · 9 题
 
@@ -288,7 +291,7 @@
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
 - [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
 
-### Greedy · 6 题
+### Greedy · 7 题
 
 - [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
 - [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · Medium
@@ -296,6 +299,7 @@
 - [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
 - [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
 - [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
+- [3789](3789-minimum-cost-to-acquire-required-items/README.md) Minimum Cost to Acquire Required Items · Medium
 
 ### Binary Search · 4 题
 

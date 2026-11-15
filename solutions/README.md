@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 62 道题** · Easy 18 · Medium 38 · Hard 6
+**共 63 道题** · Easy 18 · Medium 39 · Hard 6
 
 ## 快速跳转
 
-**按难度**：[Easy 18](#easy--18-题) · [Medium 38](#medium--38-题) · [Hard 6](#hard--6-题)
+**按难度**：[Easy 18](#easy--18-题) · [Medium 39](#medium--39-题) · [Hard 6](#hard--6-题)
 
-**按算法**：[Array 33](#array--33-题) · [Math 18](#math--18-题) · [String 18](#string--18-题) · [Dynamic Programming 9](#dynamic-programming--9-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 7](#greedy--7-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix Sum 1](#prefix-sum--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 34](#array--34-题) · [Math 19](#math--19-题) · [String 18](#string--18-题) · [Dynamic Programming 10](#dynamic-programming--10-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 7](#greedy--7-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Prefix Sum 2](#prefix-sum--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Simulation 1](#simulation--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -38,6 +38,7 @@
 | [1385](1385-find-the-distance-value-between-two-arrays/README.md) | Find the Distance Value Between Two Arrays | Easy | Array, Two Pointers, Binary Search, Sorting |
 | [1401](1401-circle-and-rectangle-overlapping/README.md) | Circle and Rectangle Overlapping | Medium | Math, Geometry |
 | [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | Array, Hash Table, Binary Search, Dynamic Programming, Sliding Window |
+| [1524](1524-number-of-sub-arrays-with-odd-sum/README.md) | Number of Sub-arrays With Odd Sum | Medium | Array, Math, Dynamic Programming, Prefix Sum |
 | [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) | Minimum Insertions to Balance a Parentheses String | Medium | String, Stack, Greedy |
 | [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) | Find Servers That Handled Most Number of Requests | Hard | Array, Greedy, Heap (Priority Queue), Ordered Set |
 | [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) | Maximum Nesting Depth of the Parentheses | Easy | String, Stack |
@@ -81,7 +82,7 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 62 道题。
+共 63 道题。
 
 ## 按难度
 
@@ -106,7 +107,7 @@
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 - [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Matrix
 
-### Medium · 38 题
+### Medium · 39 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -122,6 +123,7 @@
 - [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix, Counting
 - [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Math, Geometry
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Array, Hash Table, Binary Search, Dynamic Programming, Sliding Window
+- [1524](1524-number-of-sub-arrays-with-odd-sum/README.md) Number of Sub-arrays With Odd Sum · Array, Math, Dynamic Programming, Prefix Sum
 - [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · String, Stack, Greedy
 - [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Math, Dynamic Programming, Combinatorics
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Array, Hash Table, String
@@ -158,7 +160,7 @@
 
 ## 按算法
 
-### Array · 33 题
+### Array · 34 题
 
 - [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
 - [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
@@ -167,6 +169,7 @@
 - [1267](1267-count-servers-that-communicate/README.md) Count Servers that Communicate · Medium
 - [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Easy
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
+- [1524](1524-number-of-sub-arrays-with-odd-sum/README.md) Number of Sub-arrays With Odd Sum · Medium
 - [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
 - [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
@@ -194,13 +197,14 @@
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
 - [3942](3942-minimum-operations-to-sort-a-permutation/README.md) Minimum Operations to Sort a Permutation · Medium
 
-### Math · 18 题
+### Math · 19 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
 - [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
 - [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Easy
 - [1401](1401-circle-and-rectangle-overlapping/README.md) Circle and Rectangle Overlapping · Medium
+- [1524](1524-number-of-sub-arrays-with-odd-sum/README.md) Number of Sub-arrays With Odd Sum · Medium
 - [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
 - [2409](2409-count-days-spent-together/README.md) Count Days Spent Together · Easy
@@ -236,12 +240,13 @@
 - [3499](3499-maximize-active-section-with-trade-i/README.md) Maximize Active Section with Trade I · Medium
 - [3863](3863-minimum-operations-to-sort-a-string/README.md) Minimum Operations to Sort a String · Medium
 
-### Dynamic Programming · 9 题
+### Dynamic Programming · 10 题
 
 - [0022](0022-generate-parentheses/README.md) Generate Parentheses · Medium
 - [0115](0115-distinct-subsequences/README.md) Distinct Subsequences · Hard
 - [0940](0940-distinct-subsequences-ii/README.md) Distinct Subsequences II · Hard
 - [1477](1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/README.md) Find Two Non-overlapping Sub-arrays Each With Target Sum · Medium
+- [1524](1524-number-of-sub-arrays-with-odd-sum/README.md) Number of Sub-arrays With Odd Sum · Medium
 - [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) Number of Sets of K Non-Overlapping Line Segments · Medium
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [3524](3524-find-x-value-of-array-i/README.md) Find X Value of Array I · Medium
@@ -364,6 +369,11 @@
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Medium
 - [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) Maximum Twin Sum of a Linked List · Medium
 
+### Prefix Sum · 2 题
+
+- [1524](1524-number-of-sub-arrays-with-odd-sum/README.md) Number of Sub-arrays With Odd Sum · Medium
+- [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
+
 ### Two Pointers · 2 题
 
 - [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Easy
@@ -396,10 +406,6 @@
 ### Ordered Set · 1 题
 
 - [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
-
-### Prefix Sum · 1 题
-
-- [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Easy
 
 ### Prefix Suffix Preprocessing · 1 题
 

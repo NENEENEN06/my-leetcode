@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 65 道题** · Easy 19 · Medium 40 · Hard 6
+**共 66 道题** · Easy 19 · Medium 41 · Hard 6
 
 ## 快速跳转
 
-**按难度**：[Easy 19](#easy--19-题) · [Medium 40](#medium--40-题) · [Hard 6](#hard--6-题)
+**按难度**：[Easy 19](#easy--19-题) · [Medium 41](#medium--41-题) · [Hard 6](#hard--6-题)
 
-**按算法**：[Array 34](#array--34-题) · [String 20](#string--20-题) · [Math 19](#math--19-题) · [Dynamic Programming 10](#dynamic-programming--10-题) · [Hash Table 9](#hash-table--9-题) · [Stack 9](#stack--9-题) · [Matrix 8](#matrix--8-题) · [Sorting 8](#sorting--8-题) · [Greedy 7](#greedy--7-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Prefix Sum 2](#prefix-sum--2-题) · [Simulation 2](#simulation--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Tree 1](#tree--1-题)
+**按算法**：[Array 35](#array--35-题) · [String 20](#string--20-题) · [Math 19](#math--19-题) · [Dynamic Programming 10](#dynamic-programming--10-题) · [Hash Table 9](#hash-table--9-题) · [Sorting 9](#sorting--9-题) · [Stack 9](#stack--9-题) · [Greedy 8](#greedy--8-题) · [Matrix 8](#matrix--8-题) · [Binary Search 4](#binary-search--4-题) · [Depth-First Search 4](#depth-first-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Prefix Sum 2](#prefix-sum--2-题) · [Simulation 2](#simulation--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题) · [Tree 1](#tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -51,6 +51,7 @@
 | [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) | Check if There Is a Valid Parentheses String Path | Hard | Array, Dynamic Programming, Matrix |
 | [2333](2333-minimum-sum-of-squared-difference/README.md) | Minimum Sum of Squared Difference | Medium | Array, Math, Sorting, Heap (Priority Queue), Binary Search |
 | [2409](2409-count-days-spent-together/README.md) | Count Days Spent Together | Easy | Math, String |
+| [2567](2567-minimum-score-by-changing-two-elements/README.md) | Minimum Score by Changing Two Elements | Medium | Array, Greedy, Sorting |
 | [2747](2747-count-zero-request-servers/README.md) | Count Zero Request Servers | Medium | Array, Hash Table, Sliding Window, Sorting |
 | [2778](2778-sum-of-squares-of-special-elements/README.md) | Sum of Squares of Special Elements | Easy | Array, Enumeration |
 | [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) | Apply Operations on Array to Maximize Sum of Squares | Hard | Bit Manipulation, Greedy, Array, Hash Table |
@@ -84,7 +85,7 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 65 道题。
+共 66 道题。
 
 ## 按难度
 
@@ -110,7 +111,7 @@
 - [3903](3903-smallest-stable-index-i/README.md) Smallest Stable Index I · Array, Prefix Sum
 - [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Matrix
 
-### Medium · 40 题
+### Medium · 41 题
 
 - [0002](0002-add-two-numbers/README.md) Add Two Numbers · Linked List, Math, Recursion
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Hash Table, String, Sliding Window
@@ -133,6 +134,7 @@
 - [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) Maximum Twin Sum of a Linked List · Linked List, Two Pointers, Stack
 - [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) Count Nodes Equal to Average of Subtree · Tree, Depth-First Search, Binary Tree
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Array, Math, Sorting, Heap (Priority Queue), Binary Search
+- [2567](2567-minimum-score-by-changing-two-elements/README.md) Minimum Score by Changing Two Elements · Array, Greedy, Sorting
 - [2747](2747-count-zero-request-servers/README.md) Count Zero Request Servers · Array, Hash Table, Sliding Window, Sorting
 - [2914](2914-minimum-number-of-changes-to-make-binary-string-beautiful/README.md) Minimum Number of Changes to Make Binary String Beautiful · String
 - [3121](3121-count-the-number-of-special-characters-ii/README.md) Count the Number of Special Characters II · Hash Table, String
@@ -164,7 +166,7 @@
 
 ## 按算法
 
-### Array · 34 题
+### Array · 35 题
 
 - [0453](0453-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements · Medium
 - [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
@@ -179,6 +181,7 @@
 - [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
 - [2267](2267-check-if-there-is-a-valid-parentheses-string-path/README.md) Check if There Is a Valid Parentheses String Path · Hard
 - [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+- [2567](2567-minimum-score-by-changing-two-elements/README.md) Minimum Score by Changing Two Elements · Medium
 - [2747](2747-count-zero-request-servers/README.md) Count Zero Request Servers · Medium
 - [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Easy
 - [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
@@ -271,6 +274,18 @@
 - [3483](3483-unique-3-digit-even-numbers/README.md) Unique 3-Digit Even Numbers · Easy
 - [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
 
+### Sorting · 9 题
+
+- [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
+- [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Easy
+- [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
+- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
+- [2567](2567-minimum-score-by-changing-two-elements/README.md) Minimum Score by Changing Two Elements · Medium
+- [2747](2747-count-zero-request-servers/README.md) Count Zero Request Servers · Medium
+- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
+- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
+- [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
+
 ### Stack · 9 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · Easy
@@ -283,6 +298,17 @@
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · Easy
 - [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) Maximum Twin Sum of a Linked List · Medium
 
+### Greedy · 8 题
+
+- [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
+- [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · Medium
+- [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
+- [2567](2567-minimum-score-by-changing-two-elements/README.md) Minimum Score by Changing Two Elements · Medium
+- [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
+- [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
+- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
+- [3789](3789-minimum-cost-to-acquire-required-items/README.md) Minimum Cost to Acquire Required Items · Medium
+
 ### Matrix · 8 题
 
 - [0835](0835-image-overlap/README.md) Image Overlap · Medium
@@ -293,27 +319,6 @@
 - [3619](3619-count-islands-with-total-value-divisible-by-k/README.md) Count Islands With Total Value Divisible by K · Medium
 - [3665](3665-twisted-mirror-path-count/README.md) Twisted Mirror Path Count · Medium
 - [3963](3963-create-grid-with-exactly-one-path/README.md) Create Grid With Exactly One Path · Easy
-
-### Sorting · 8 题
-
-- [0462](0462-minimum-moves-to-equal-array-elements/README.md) Minimum Moves to Equal Array Elements II · Medium
-- [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Easy
-- [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Easy
-- [2333](2333-minimum-sum-of-squared-difference/README.md) Minimum Sum of Squared Difference · Medium
-- [2747](2747-count-zero-request-servers/README.md) Count Zero Request Servers · Medium
-- [3551](3551-minimum-swaps-to-sort-by-digit-sum/README.md) Minimum Swaps to Sort by Digit Sum · Medium
-- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
-- [3886](3886-sum-of-sortable-integers/README.md) Sum of Sortable Integers · Hard
-
-### Greedy · 7 题
-
-- [0921](0921-minimum-add-to-make-parentheses-valid/README.md) Minimum Add to Make Parentheses Valid · Medium
-- [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · Medium
-- [1606](1606-find-servers-that-handled-most-number-of-requests/README.md) Find Servers That Handled Most Number of Requests · Hard
-- [2897](2897-apply-operations-on-array-to-maximize-sum-of-squares/README.md) Apply Operations on Array to Maximize Sum of Squares · Hard
-- [3723](3723-maximize-sum-of-squares-of-digits/README.md) Maximize Sum of Squares of Digits · Medium
-- [3727](3727-maximum-alternating-sum-of-squares/README.md) Maximum Alternating Sum of Squares · Medium
-- [3789](3789-minimum-cost-to-acquire-required-items/README.md) Minimum Cost to Acquire Required Items · Medium
 
 ### Binary Search · 4 题
 

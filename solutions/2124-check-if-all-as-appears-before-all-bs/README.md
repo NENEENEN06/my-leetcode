@@ -18,8 +18,8 @@
 ```cpp
 class Solution {
 public:
-    bool checkString(string letters) {
-        return letters.find("ba") == string::npos;
+    bool checkString(string s) {
+        return s.find("ba") == string::npos;
     }
 };
 ```
@@ -28,7 +28,7 @@ public:
 
 - **找到 `ba` 就一定违规**：这个子串里的 `b` 出现在 `a` 前面，已经构成反例。
 - **违规就一定能找到 `ba`**：如果某个 `b` 右侧还有 `a`，从这个 `b` 往右找第一个 `a`。从该 `b` 到这个 `a` 之前没有 `a`，而题目只允许两种字符，所以这个 `a` 的前一个字符必是 `b`。因此只检查相邻的 `ba` 就足够。
-- `letters.find("ba")` 在未找到时返回 `string::npos`。代码取自力扣 Accepted 提交 `761093491`，只调整了变量名和排版。
+- `s.find("ba")` 在未找到时返回 `string::npos`。代码取自力扣 Accepted 提交 `761093491`，只调整了缩进与空格——`s` 是题面签名里的参数名，保持原样。
 
 ## 复杂度
 

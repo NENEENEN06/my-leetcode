@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool checkString(string letters) {
-        return letters.find("ba") == string::npos;
+    bool checkString(string s) {
+        return s.find("ba") == string::npos;
     }
 };

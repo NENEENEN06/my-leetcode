@@ -4,13 +4,13 @@
 
 <!-- leetcode-index:start -->
 
-**共 68 道题** · Easy 19 · Medium 42 · Hard 7
+**共 69 道题** · Easy 20 · Medium 42 · Hard 7
 
 ## 快速跳转
 
-**按难度**：[Easy 19](#easy--19-题) · [Medium 42](#medium--42-题) · [Hard 7](#hard--7-题)
+**按难度**：[Easy 20](#easy--20-题) · [Medium 42](#medium--42-题) · [Hard 7](#hard--7-题)
 
-**按算法**：[Array 37](#array--37-题) · [String 21](#string--21-题) · [Math 19](#math--19-题) · [Dynamic Programming 11](#dynamic-programming--11-题) · [Hash Table 10](#hash-table--10-题) · [Sorting 10](#sorting--10-题) · [Stack 9](#stack--9-题) · [Greedy 8](#greedy--8-题) · [Matrix 8](#matrix--8-题) · [Depth-First Search 5](#depth-first-search--5-题) · [Binary Search 4](#binary-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Prefix Sum 2](#prefix-sum--2-题) · [Simulation 2](#simulation--2-题) · [Tree 2](#tree--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题)
+**按算法**：[Array 37](#array--37-题) · [String 22](#string--22-题) · [Math 19](#math--19-题) · [Dynamic Programming 11](#dynamic-programming--11-题) · [Hash Table 10](#hash-table--10-题) · [Sorting 10](#sorting--10-题) · [Stack 9](#stack--9-题) · [Greedy 8](#greedy--8-题) · [Matrix 8](#matrix--8-题) · [Depth-First Search 5](#depth-first-search--5-题) · [Binary Search 4](#binary-search--4-题) · [Enumeration 4](#enumeration--4-题) · [Bit Manipulation 3](#bit-manipulation--3-题) · [Breadth-First Search 3](#breadth-first-search--3-题) · [Sliding Window 3](#sliding-window--3-题) · [Union-Find 3](#union-find--3-题) · [Geometry 2](#geometry--2-题) · [Heap (Priority Queue) 2](#heap-priority-queue--2-题) · [Linked List 2](#linked-list--2-题) · [Prefix Sum 2](#prefix-sum--2-题) · [Simulation 2](#simulation--2-题) · [Tree 2](#tree--2-题) · [Two Pointers 2](#two-pointers--2-题) · [Backtracking 1](#backtracking--1-题) · [BFS 1](#bfs--1-题) · [Binary Indexed Tree 1](#binary-indexed-tree--1-题) · [Binary Tree 1](#binary-tree--1-题) · [Combinatorics 1](#combinatorics--1-题) · [Counting 1](#counting--1-题) · [Ordered Set 1](#ordered-set--1-题) · [Prefix/Suffix Preprocessing 1](#prefix-suffix-preprocessing--1-题) · [Recursion 1](#recursion--1-题) · [Segment Tree 1](#segment-tree--1-题)
 
 > 找某题：浏览器里 `Ctrl+F` 直接搜题号（如 `0835`），或点下表里的题号进入题解。
 
@@ -45,6 +45,7 @@
 | [1621](1621-number-of-sets-of-k-non-overlapping-line-segments/README.md) | Number of Sets of K Non-Overlapping Line Segments | Medium | Math, Dynamic Programming, Combinatorics |
 | [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) | Evaluate the Bracket Pairs of a String | Medium | Array, Hash Table, String |
 | [2089](2089-find-target-indices-after-sorting-array/README.md) | Find Target Indices After Sorting Array | Easy | Array, Binary Search, Sorting |
+| [2124](2124-check-if-all-as-appears-before-all-bs/README.md) | Check if All A's Appears Before All B's | Easy | String |
 | [2130](2130-maximum-twin-sum-of-a-linked-list/README.md) | Maximum Twin Sum of a Linked List | Medium | Linked List, Two Pointers, Stack |
 | [2243](2243-calculate-digit-sum-of-a-string/README.md) | Calculate Digit Sum of a String | Easy | String, Simulation |
 | [2265](2265-count-nodes-equal-to-average-of-subtree/README.md) | Count Nodes Equal to Average of Subtree | Medium | Tree, Depth-First Search, Binary Tree |
@@ -87,11 +88,11 @@
 | [3942](3942-minimum-operations-to-sort-a-permutation/README.md) | Minimum Operations to Sort a Permutation | Medium | Array |
 | [3963](3963-create-grid-with-exactly-one-path/README.md) | Create Grid With Exactly One Path | Easy | Matrix |
 
-共 68 道题。
+共 69 道题。
 
 ## 按难度
 
-### Easy · 19 题
+### Easy · 20 题
 
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · String, Stack
 - [0836](0836-rectangle-overlap/README.md) Rectangle Overlap · Math, Geometry
@@ -99,6 +100,7 @@
 - [1385](1385-find-the-distance-value-between-two-arrays/README.md) Find the Distance Value Between Two Arrays · Array, Two Pointers, Binary Search, Sorting
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · String, Stack
 - [2089](2089-find-target-indices-after-sorting-array/README.md) Find Target Indices After Sorting Array · Array, Binary Search, Sorting
+- [2124](2124-check-if-all-as-appears-before-all-bs/README.md) Check if All A's Appears Before All B's · String
 - [2243](2243-calculate-digit-sum-of-a-string/README.md) Calculate Digit Sum of a String · String, Simulation
 - [2409](2409-count-days-spent-together/README.md) Count Days Spent Together · Math, String
 - [2778](2778-sum-of-squares-of-special-elements/README.md) Sum of Squares of Special Elements · Array, Enumeration
@@ -210,7 +212,7 @@
 - [3904](3904-smallest-stable-index-ii/README.md) Smallest Stable Index II · Medium
 - [3942](3942-minimum-operations-to-sort-a-permutation/README.md) Minimum Operations to Sort a Permutation · Medium
 
-### String · 21 题
+### String · 22 题
 
 - [0003](0003-longest-substring-without-repeating-characters/README.md) Longest Substring Without Repeating Characters · Medium
 - [0020](0020-valid-parentheses/README.md) Valid Parentheses · Easy
@@ -225,6 +227,7 @@
 - [1541](1541-minimum-insertions-to-balance-a-parentheses-string/README.md) Minimum Insertions to Balance a Parentheses String · Medium
 - [1614](1614-maximum-nesting-depth-of-the-parentheses/README.md) Maximum Nesting Depth of the Parentheses · Easy
 - [1807](1807-evaluate-the-bracket-pairs-of-a-string/README.md) Evaluate the Bracket Pairs of a String · Medium
+- [2124](2124-check-if-all-as-appears-before-all-bs/README.md) Check if All A's Appears Before All B's · Easy
 - [2243](2243-calculate-digit-sum-of-a-string/README.md) Calculate Digit Sum of a String · Easy
 - [2409](2409-count-days-spent-together/README.md) Count Days Spent Together · Easy
 - [2914](2914-minimum-number-of-changes-to-make-binary-string-beautiful/README.md) Minimum Number of Changes to Make Binary String Beautiful · Medium
